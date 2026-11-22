@@ -72,12 +72,9 @@ class SearchTests(unittest.TestCase):
 
         def minimax(position, depth, ply=0):
             if depth == 0 or position.is_game_over():
-                score = move.evaluate(position)
-                if score == move.MATE_SCORE:
-                    return score - ply
-                if score == -move.MATE_SCORE:
-                    return score + ply
-                return score
+                if position.is_game_over():
+                    return move.position_score(position, ply)
+                return move.quiescence(position, -float("inf"), float("inf"), ply=ply)
             scores = []
             for candidate in position.legal_moves:
                 position.push(candidate)
@@ -86,6 +83,20 @@ class SearchTests(unittest.TestCase):
             return max(scores) if position.turn == chess.WHITE else min(scores)
 
         self.assertEqual(move.search(board, 3), minimax(board, 3))
+
+    def test_quiescence_sees_recapture_at_horizon(self):
+        board = chess.Board("3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1")
+        board.push_uci("d1d7")
+        self.assertGreater(move.evaluate(board), 0)
+        self.assertLess(move.search(board, 0), 0)
+
+    def test_quiescence_handles_check_and_preserves_board(self):
+        board = chess.Board("4k3/8/8/8/8/8/4R3/4K3 b - - 0 1")
+        before = board.fen()
+        self.assertTrue(board.is_check())
+        score = move.quiescence(board, -float("inf"), float("inf"))
+        self.assertIsInstance(score, (float, int))
+        self.assertEqual(board.fen(), before)
 
     def test_interrupted_iteration_keeps_last_completed_move(self):
         board = chess.Board("3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1")

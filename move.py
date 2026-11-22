@@ -72,19 +72,66 @@ def move_order_score(board: chess.Board, candidate: chess.Move):
     return promotion
 
 
+def position_score(board: chess.Board, ply: int):
+    score = evaluate(board)
+    if score == MATE_SCORE:
+        return score - ply
+    if score == -MATE_SCORE:
+        return score + ply
+    return score
+
+
+def quiescence(board: chess.Board, alpha, beta, deadline=None, stop=None, ply=0,
+               remaining=6):
+    """Extend forcing captures, promotions, and check evasions at the horizon."""
+    if (stop is not None and stop.is_set()) or (deadline is not None and monotonic() >= deadline):
+        raise SearchStopped
+    if board.is_game_over() or remaining == 0:
+        return position_score(board, ply)
+    maximizing = board.turn == chess.WHITE
+    in_check = board.is_check()
+    if in_check:
+        best = -float("inf") if maximizing else float("inf")
+        candidates = list(board.legal_moves)
+    else:
+        best = position_score(board, ply)
+        if maximizing:
+            if best >= beta:
+                return best
+            alpha = max(alpha, best)
+        else:
+            if best <= alpha:
+                return best
+            beta = min(beta, best)
+        candidates = [candidate for candidate in board.legal_moves
+                      if board.is_capture(candidate) or candidate.promotion]
+    for candidate in sorted(candidates, key=lambda candidate: move_order_score(board, candidate),
+                            reverse=True):
+        board.push(candidate)
+        try:
+            score = quiescence(board, alpha, beta, deadline, stop, ply + 1, remaining - 1)
+        finally:
+            board.pop()
+        if maximizing:
+            best = max(best, score)
+            alpha = max(alpha, best)
+        else:
+            best = min(best, score)
+            beta = min(beta, best)
+        if alpha >= beta:
+            break
+    return best
+
+
 def search(board: chess.Board, depth: int, alpha=-float("inf"),
            beta=float("inf"), deadline=None, stop=None, ply=0):
     """Alpha-beta minimax, with depth measured in individual moves (plies)."""
     if (stop is not None and stop.is_set()) or (deadline is not None and monotonic() >= deadline):
         raise SearchStopped
-    if depth == 0 or board.is_game_over():
-        score = evaluate(board)
-        # Prefer a quicker win or a slower loss over the same eventual mate.
-        if score == MATE_SCORE:
-            return score - ply
-        if score == -MATE_SCORE:
-            return score + ply
-        return score
+    if board.is_game_over():
+        return position_score(board, ply)
+    if depth == 0:
+        return quiescence(board, alpha, beta, deadline, stop, ply)
 
     maximizing = board.turn == chess.WHITE
     best = -float("inf") if maximizing else float("inf")
