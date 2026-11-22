@@ -1,4 +1,5 @@
 from sys import stdin
+from move import get_move
 import chess
 
 board = chess.Board()
@@ -16,6 +17,8 @@ while True:
                 print("uciok", flush = True)
             case "isready":
                 print("readyok", flush = True)
+            case "ucinewgame":
+                board.reset()
             case "position":
                 length = len(arguments)
                 if length >= 2:
@@ -33,5 +36,9 @@ while True:
                                 if arguments[8] == "moves":
                                     for move in arguments[9:]:
                                         board.push_uci(move)
+            case "go":
+                print(f"bestmove {get_move(board)}", flush = True)
+            case "stop":
+                pass
             case "quit":
                 break 
