@@ -22,6 +22,34 @@ PIECE_VALUES = {
 MATE_SCORE = 100_000
 
 
+def positional_table(piece_type, color, endgame=False):
+    table = []
+    for square in chess.SQUARES:
+        file = chess.square_file(square)
+        rank = chess.square_rank(square)
+        advance = rank if color == chess.WHITE else 7 - rank
+        centrality = 6 - abs(2 * file - 7) - abs(2 * rank - 7)
+        if piece_type == chess.PAWN:
+            bonus = 5 * advance + 2 * (3 - abs(2 * file - 7))
+        elif piece_type == chess.KNIGHT:
+            bonus = 5 * centrality
+        elif piece_type == chess.BISHOP:
+            bonus = 3 * centrality
+        elif piece_type == chess.QUEEN:
+            bonus = centrality
+        elif piece_type == chess.KING:
+            bonus = 5 * centrality if endgame else -8 * advance
+        else:
+            bonus = 0
+        table.append(bonus)
+    return tuple(table)
+
+
+POSITIONAL_TABLES = {(piece, color, phase): positional_table(piece, color, phase)
+                     for piece in chess.PIECE_TYPES for color in chess.COLORS
+                     for phase in (False, True)}
+
+
 def evaluate(board: chess.Board):
     """Score a position in centipawns from White's perspective."""
     outcome = board.outcome()
@@ -42,25 +70,13 @@ def evaluate(board: chess.Board):
                                len(board.pieces(piece, chess.BLACK)))
         for piece in (chess.KNIGHT, chess.BISHOP, chess.ROOK, chess.QUEEN)
     )
-    for square, piece in board.piece_map().items():
-        file = chess.square_file(square)
-        rank = chess.square_rank(square)
-        advance = rank if piece.color == chess.WHITE else 7 - rank
-        centrality = 6 - abs(2 * file - 7) - abs(2 * rank - 7)
-        if piece.piece_type == chess.PAWN:
-            bonus = 5 * advance + 2 * (3 - abs(2 * file - 7))
-        elif piece.piece_type == chess.KNIGHT:
-            bonus = 5 * centrality
-        elif piece.piece_type == chess.BISHOP:
-            bonus = 3 * centrality
-        elif piece.piece_type == chess.QUEEN:
-            bonus = centrality
-        elif piece.piece_type == chess.KING:
-            # Centralized kings are useful in the endgame, but exposed earlier.
-            bonus = 5 * centrality if nonpawn_material <= 2600 else -8 * advance
-        else:
-            bonus = 0
-        positional += bonus if piece.color == chess.WHITE else -bonus
+    endgame = nonpawn_material <= 2600
+    for color in chess.COLORS:
+        sign = 1 if color == chess.WHITE else -1
+        for piece_type in chess.PIECE_TYPES:
+            table = POSITIONAL_TABLES[piece_type, color, endgame]
+            positional += sign * sum(table[square] for square in
+                                     chess.scan_forward(board.pieces_mask(piece_type, color)))
     return material + positional
 
 

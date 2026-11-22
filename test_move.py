@@ -1,5 +1,6 @@
 import unittest
 from unittest.mock import patch
+import random
 
 import chess
 import chess.polyglot
@@ -49,6 +50,44 @@ class SearchTests(unittest.TestCase):
         center = chess.Board("4k3/p7/8/8/3K4/8/8/8 w - - 0 1")
         self.assertGreater(move.evaluate(center), move.evaluate(edge))
         self.assertEqual(move.evaluate(center), -move.evaluate(center.mirror()))
+
+    def test_precomputed_evaluation_matches_original_formula(self):
+        def original(board):
+            if board.is_game_over():
+                return move.position_score(board, 0)
+            material = sum(value * (len(board.pieces(piece, chess.WHITE)) -
+                                    len(board.pieces(piece, chess.BLACK)))
+                           for piece, value in move.PIECE_VALUES.items())
+            nonpawns = sum(move.PIECE_VALUES[piece] *
+                           (len(board.pieces(piece, chess.WHITE)) + len(board.pieces(piece, chess.BLACK)))
+                           for piece in (chess.KNIGHT, chess.BISHOP, chess.ROOK, chess.QUEEN))
+            positional = 0
+            for square, piece in board.piece_map().items():
+                file, rank = chess.square_file(square), chess.square_rank(square)
+                advance = rank if piece.color else 7 - rank
+                centrality = 6 - abs(2 * file - 7) - abs(2 * rank - 7)
+                if piece.piece_type == chess.PAWN:
+                    bonus = 5 * advance + 2 * (3 - abs(2 * file - 7))
+                elif piece.piece_type == chess.KNIGHT:
+                    bonus = 5 * centrality
+                elif piece.piece_type == chess.BISHOP:
+                    bonus = 3 * centrality
+                elif piece.piece_type == chess.QUEEN:
+                    bonus = centrality
+                elif piece.piece_type == chess.KING:
+                    bonus = 5 * centrality if nonpawns <= 2600 else -8 * advance
+                else:
+                    bonus = 0
+                positional += bonus if piece.color else -bonus
+            return material + positional
+
+        rng = random.Random(10)
+        board = chess.Board()
+        for _ in range(150):
+            self.assertEqual(move.evaluate(board), original(board), board.fen())
+            if board.is_game_over():
+                board.reset()
+            board.push(rng.choice(list(board.legal_moves)))
 
     def test_book_takes_precedence(self):
         board = chess.Board()
