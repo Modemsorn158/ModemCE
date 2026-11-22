@@ -67,7 +67,9 @@ def update_report(output, status):
     for newer, older in PAIRS:
         name = f"ModemCE{newer}-vs-ModemCE{older}"
         wins = losses = draws = 0
-        for path in sorted((output / name).glob("batch-*.pgn")):
+        completed = {item["batch"] for item in status["completed_batches"] if item["match"] == name}
+        for batch in sorted(completed):
+            path = output / name / f"batch-{batch:02d}.pgn"
             for game in read_games(path, f"ModemCE{newer}", f"ModemCE{older}"):
                 result = game.headers["Result"]
                 if result == "1/2-1/2":
@@ -88,6 +90,7 @@ def update_report(output, status):
         "Time control: **30 seconds plus 0.2 seconds per move**, 1,000 ms Cute Chess time margin,",
         "one game at a time, 200-full-move draw limit. The engine's own opening books remain enabled.",
         "The matches use the same 25 openings; they do not sample all possible openings or opponents.", "",
+        "The table includes only fully completed and validated batches; partial batches are kept separately.", "",
         "| Match | Wins–losses–draws | Games | Score | Records |",
         "| --- | ---: | ---: | ---: | --- |", *rows, "",
         "Individual batch PGNs and logs are in the linked folders. [settings.json](settings.json)",

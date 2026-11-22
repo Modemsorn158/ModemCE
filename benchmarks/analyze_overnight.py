@@ -10,7 +10,7 @@ from pathlib import Path
 import chess.pgn
 
 
-def analyze(folder, rng, replicates):
+def analyze(folder, rng, replicates, completed=None):
     match = re.fullmatch(r"(ModemCE\d+)-vs-(ModemCE\d+)", folder.name)
     if match is None:
         raise ValueError(f"Unexpected match folder: {folder}")
@@ -18,6 +18,8 @@ def analyze(folder, rng, replicates):
     clusters = defaultdict(list)
     wins = losses = draws = 0
     for pgn in sorted(folder.glob("batch-*.pgn")):
+        if completed is not None and (folder.name, pgn.stem) not in completed:
+            continue
         with pgn.open(encoding="utf-8-sig") as source:
             while game := chess.pgn.read_game(source):
                 if game.errors:
@@ -72,9 +74,16 @@ def main():
     if args.replicates < 100:
         parser.error("use at least 100 bootstrap replicates")
     rng = random.Random(args.seed)
+    status_path = args.directory / "status.json"
+    completed = None
+    if status_path.is_file():
+        status = json.loads(status_path.read_text(encoding="utf-8"))
+        completed = {(item["match"], f"batch-{item['batch']:02d}")
+                     for item in status["completed_batches"]}
     results = [result for folder in sorted(args.directory.glob("ModemCE*-vs-ModemCE*"))
-               if (result := analyze(folder, rng, args.replicates)) is not None]
-    print(json.dumps({"seed": args.seed, "replicates": args.replicates, "matches": results}, indent=2))
+               if (result := analyze(folder, rng, args.replicates, completed)) is not None]
+    print(json.dumps({"seed": args.seed, "replicates": args.replicates,
+                      "completed_batches_only": completed is not None, "matches": results}, indent=2))
 
 
 if __name__ == "__main__":
