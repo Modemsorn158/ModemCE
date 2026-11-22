@@ -1,0 +1,49 @@
+Command: <PROJECT>\tools\cutechess-1.5.1\cutechess-1.5.1-win64\cutechess-cli.exe -engine cmd=<PROJECT>\dist\ModemCE9.exe name=ModemCE9 -engine cmd=<PROJECT>\dist\ModemCE8.exe name=ModemCE8 -each proto=uci tc=30+0.2 timemargin=1000 -openings file=<PROJECT>\benchmarks\openings\overnight.pgn format=pgn plies=6 order=sequential start=6 -repeat -games 2 -rounds 5 -concurrency 1 -maxmoves 200 -pgnout <PROJECT>\benchmarks\overnight-2026-11-22\ModemCE9-vs-ModemCE8\batch-02.pgn fi
+
+Started game 1 of 10 (ModemCE9 vs ModemCE8)
+Finished game 1 (ModemCE9 vs ModemCE8): 1-0 {White mates}
+Score of ModemCE9 vs ModemCE8: 1 - 0 - 0  [1.000] 1
+Started game 2 of 10 (ModemCE8 vs ModemCE9)
+Finished game 2 (ModemCE8 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE9 vs ModemCE8: 2 - 0 - 0  [1.000] 2
+Started game 3 of 10 (ModemCE9 vs ModemCE8)
+Finished game 3 (ModemCE9 vs ModemCE8): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE9 vs ModemCE8: 2 - 0 - 1  [0.833] 3
+Started game 4 of 10 (ModemCE8 vs ModemCE9)
+Finished game 4 (ModemCE8 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE9 vs ModemCE8: 3 - 0 - 1  [0.875] 4
+Started game 5 of 10 (ModemCE9 vs ModemCE8)
+Finished game 5 (ModemCE9 vs ModemCE8): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE9 vs ModemCE8: 3 - 0 - 2  [0.800] 5
+Started game 6 of 10 (ModemCE8 vs ModemCE9)
+Finished game 6 (ModemCE8 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE9 vs ModemCE8: 3 - 0 - 3  [0.750] 6
+Started game 7 of 10 (ModemCE9 vs ModemCE8)
+Finished game 7 (ModemCE9 vs ModemCE8): 0-1 {Black mates}
+Score of ModemCE9 vs ModemCE8: 3 - 1 - 3  [0.643] 7
+Started game 8 of 10 (ModemCE8 vs ModemCE9)
+Finished game 8 (ModemCE8 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE9 vs ModemCE8: 4 - 1 - 3  [0.688] 8
+Started game 9 of 10 (ModemCE9 vs ModemCE8)
+Finished game 9 (ModemCE9 vs ModemCE8): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE9 vs ModemCE8: 4 - 1 - 4  [0.667] 9
+Started game 10 of 10 (ModemCE8 vs ModemCE9)
+Finished game 10 (ModemCE8 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE9 vs ModemCE8: 5 - 1 - 4  [0.700] 10
+...      ModemCE9 playing White: 1 - 1 - 3  [0.500] 5
+...      ModemCE9 playing Black: 4 - 0 - 1  [0.900] 5
+...      White vs Black: 1 - 5 - 4  [0.300] 10
+Elo difference: 147.2 +/- 197.9, LOS: 94.9 %, DrawRatio: 40.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: ModemCE9
+   "Draw by 3-fold repetition": 4
+   "Loss: Black mates": 1
+   "Win: Black mates": 4
+   "Win: White mates": 1
+Player: ModemCE8
+   "Draw by 3-fold repetition": 4
+   "Loss: Black mates": 4
+   "Loss: White mates": 1
+   "Win: Black mates": 1
+Finished match
