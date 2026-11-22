@@ -1,0 +1,45 @@
+Command: <PROJECT>\tools\cutechess-1.5.1\cutechess-1.5.1-win64\cutechess-cli.exe -engine cmd=<PROJECT>\dist\ModemCE4.exe name=ModemCE4 -engine cmd=<PROJECT>\dist\ModemCE3.exe name=ModemCE3 -each proto=uci tc=3+0.03 timemargin=1000 -games 2 -rounds 4 -concurrency 1 -maxmoves 200 -pgnout <PROJECT>\benchmarks\2026-11-22-3s\ModemCE4-vs-ModemCE3.pgn
+
+Started game 1 of 8 (ModemCE4 vs ModemCE3)
+Finished game 1 (ModemCE4 vs ModemCE3): 1-0 {White mates}
+Score of ModemCE4 vs ModemCE3: 1 - 0 - 0  [1.000] 1
+Started game 2 of 8 (ModemCE3 vs ModemCE4)
+Finished game 2 (ModemCE3 vs ModemCE4): 0-1 {Black mates}
+Score of ModemCE4 vs ModemCE3: 2 - 0 - 0  [1.000] 2
+Started game 3 of 8 (ModemCE4 vs ModemCE3)
+Finished game 3 (ModemCE4 vs ModemCE3): 1-0 {White mates}
+Score of ModemCE4 vs ModemCE3: 3 - 0 - 0  [1.000] 3
+Started game 4 of 8 (ModemCE3 vs ModemCE4)
+Finished game 4 (ModemCE3 vs ModemCE4): 1-0 {White mates}
+Score of ModemCE4 vs ModemCE3: 3 - 1 - 0  [0.750] 4
+Started game 5 of 8 (ModemCE4 vs ModemCE3)
+Finished game 5 (ModemCE4 vs ModemCE3): 0-1 {Black mates}
+Score of ModemCE4 vs ModemCE3: 3 - 2 - 0  [0.600] 5
+Started game 6 of 8 (ModemCE3 vs ModemCE4)
+Finished game 6 (ModemCE3 vs ModemCE4): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE4 vs ModemCE3: 3 - 2 - 1  [0.583] 6
+Started game 7 of 8 (ModemCE4 vs ModemCE3)
+Finished game 7 (ModemCE4 vs ModemCE3): 1-0 {White mates}
+Score of ModemCE4 vs ModemCE3: 4 - 2 - 1  [0.643] 7
+Started game 8 of 8 (ModemCE3 vs ModemCE4)
+Finished game 8 (ModemCE3 vs ModemCE4): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE4 vs ModemCE3: 4 - 2 - 2  [0.625] 8
+...      ModemCE4 playing White: 3 - 1 - 0  [0.750] 4
+...      ModemCE4 playing Black: 1 - 1 - 2  [0.500] 4
+...      White vs Black: 4 - 2 - 2  [0.625] 8
+Elo difference: 88.7 +/- 261.3, LOS: 79.3 %, DrawRatio: 25.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: ModemCE4
+   "Draw by 3-fold repetition": 2
+   "Loss: Black mates": 1
+   "Loss: White mates": 1
+   "Win: Black mates": 1
+   "Win: White mates": 3
+Player: ModemCE3
+   "Draw by 3-fold repetition": 2
+   "Loss: Black mates": 1
+   "Loss: White mates": 3
+   "Win: Black mates": 1
+   "Win: White mates": 1
+Finished match

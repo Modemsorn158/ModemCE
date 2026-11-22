@@ -1,0 +1,332 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "1"]
+[White "ModemCE2"]
+[Black "ModemCE1"]
+[Result "0-1"]
+[ECO "A00"]
+[GameDuration "00:00:00"]
+[GameEndTime "2026-11-22T19:05:36.647 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:36.473 SE Asia Standard Time"]
+[Opening "Saragossa Opening"]
+[PlyCount "134"]
+[TimeControl "3+0.03"]
+
+1. c3 b6 2. f3 Bb7 3. a4 Ba6 4. h3 Nh6 5. e3 d6 6. Ra3 Bc4 7. Ra2 Bxf1 8. Kf2
+Ng8 9. a5 c6 10. Kg3 Bc4 11. Na3 e6 12. Qe2 Qh4+ 13. Kh2 Ne7 14. Qf1 Kd8 15. a6
+e5 16. Qe1 Bd3 17. Nc2 Ng6 18. Qg3 Qf4 19. Na3 f6 20. c4 Nh4 21. Ne2 Nxf3+
+22. gxf3 Bg6 23. exf4 Nxa6 24. Nb1 Rc8 25. d4 Ke8 26. Qg5 Be4 27. Ra3 Bg6
+28. Qxg6+ Kd7 29. Ra4 hxg6 30. Ra3 Nc5 31. Ra5 Nb7 32. Rc5 b5 33. Na3 Rc7 34. h4
+b4 35. d5 a6 36. Ng3 Kc8 37. Nf5 Re7 38. Re1 e4 39. Nh6 Re5 40. Bd2 bxa3
+41. fxe4 f5 42. b3 Kd8 43. Nf7+ Kd7 44. Nxe5+ Kd8 45. Kg3 dxe5 46. Rh1 Rxh4
+47. Rg1 a2 48. Rb1 g5 49. Rh1 exf4+ 50. Kf2 Kc8 51. Rc1 Bxc5+ 52. Kf1 Rh7
+53. Ke2 Rh6 54. Re1 Bb4 55. dxc6 Rh8 56. Bxb4 Rh4 57. Rb1 axb1=Q 58. exf5 Rh3
+59. Be1 Rh2+ 60. Kf3 Ra2 61. Bd2 Kd8 62. Bc3 Na5 63. Bxa5+ Ke7 64. Be1 Qc2
+65. f6+ Kd6 66. Bb4+ Kc7 67. Ba3 Qg2# {Black mates} 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "1"]
+[White "ModemCE1"]
+[Black "ModemCE2"]
+[Result "1/2-1/2"]
+[ECO "A00"]
+[GameDuration "00:00:01"]
+[GameEndTime "2026-11-22T19:05:37.878 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:36.651 SE Asia Standard Time"]
+[Opening "Dunst (Sleipner, Heinrichsen) Opening"]
+[PlyCount "407"]
+[TimeControl "3+0.03"]
+
+1. Nc3 d6 2. Na4 Nc6 3. g3 Nb4 4. Nh3 Nd5 5. e3 Nb4 6. Bb5+ c6 7. d4 Bf5 8. b3
+e5 9. Qe2 Rc8 10. Qd2 Ne7 11. Bxc6+ Nbxc6 12. Ng1 Qc7 13. Ba3 g6 14. Nb2 a6
+15. c3 g5 16. Bxd6 Ng6 17. f3 Qxd6 18. b4 Nb8 19. a3 e4 20. Ke2 Qf4 21. Kf1 Bd7
+22. a4 Qxg3 23. Qd3 Rc4 24. Rd1 Nh4 25. Qd2 Bh6 26. f4 Qh3+ 27. Ke1 Bg4 28. Qg2
+Bxd1 29. Qxh3 Bf8 30. Qf1 f5 31. Kxd1 Bg7 32. Nxc4 Nd7 33. Kd2 h5 34. Qf2 Rg8
+35. Nh3 Bh6 36. Rd1 Rh8 37. Rc1 b6 38. Re1 Kf7 39. Qf3 Ke6 40. Qf1 Nc5 41. Ne5
+b5 42. a5 Rg8 43. Rb1 Nb3+ 44. Kc2 Na1+ 45. Kb2 Re8 46. d5+ Ke7 47. Qe2 Ng6
+48. Qg2 Rg8 49. Nc6+ Kf6 50. Rc1 Rc8 51. Qf3 Nh4 52. Rh1 Rc7 53. Rd1 Rxc6
+54. Ng1 Ng6 55. Re1 Rc5 56. fxg5+ Kf7 57. gxh6 Rc6 58. Qxh5 Rf6 59. Qe2 f4
+60. Qg4 Ne7 61. h4 Rf5 62. Qxf5+ Kg8 63. Qf8+ Kh7 64. Qxe7+ Kh8 65. Rf1 Kg8
+66. Qe8+ Kh7 67. Nh3 fxe3 68. Kc1 Nb3+ 69. Kd1 Nc1 70. Rf6 e2+ 71. Kd2 Nd3
+72. Qf7+ Kh8 73. Qc7 Nf4 74. Ng1 e1=Q+ 75. Kc2 Ng6 76. d6 Kg8 77. Rf5 Qa1
+78. Qc4+ Kh8 79. Qg8+ Kxg8 80. Kd2 Qa3 81. Rf8+ Nxf8 82. Nf3 exf3 83. d7 Ne6
+84. Kd3 Qa2 85. Ke3 Nf8 86. Kf4 Qf2 87. Kg4 Nxd7 88. Kh5 Qg2 89. h7+ Kf7
+90. h8=N+ Kf8 91. Kh6 Qh1 92. Ng6+ Ke8 93. Nf8 Qc1+ 94. Kh5 Qb2 95. Kg6 Kd8
+96. Kf7 Nxf8 97. Kg8 Qe2 98. Kf7 f2 99. c4 Kc8 100. Kg7 bxc4 101. Kh6 Qf3
+102. b5 Qf6+ 103. Kh5 Kb7 104. b6 Qf5+ 105. Kh6 f1=B 106. Kg7 Qg5+ 107. hxg5
+Ne6+ 108. Kf7 Nf8 109. Kg7 Nh7 110. Kh8 Bd3 111. g6 Be4 112. Kxh7 Bc2 113. Kg7
+Kb8 114. Kf7 Ba4 115. Kg7 Bc6 116. b7 Be8 117. Kh8 Bxg6 118. Kg8 Bh7+ 119. Kf8
+Bd3 120. Ke8 Bg6+ 121. Kd7 Bh7 122. Ke6 Bg6 123. Kd6 Kxb7 124. Kc5 Bh5 125. Kb4
+Be2 126. Ka4 Bg4 127. Kb4 Bf3 128. Ka4 Bd1+ 129. Kb4 Ka7 130. Kc3 Bc2 131. Kb4
+Bb3 132. Kc3 Kb8 133. Kb2 Ba4 134. Ka1 Be8 135. Kb2 Bc6 136. Kb1 Bf3 137. Ka2
+Ka8 138. Ka1 Bd5 139. Kb2 Kb8 140. Kc3 Bg2 141. Kb2 Bb7 142. Ka3 Kc7 143. Kb4
+Ba8 144. Kc5 Bb7 145. Kxc4 Kb8 146. Kd3 Ka8 147. Kc3 Bf3 148. Kc2 Bd1+ 149. Kxd1
+Kb8 150. Kd2 Kc7 151. Kc1 Kb8 152. Kb1 Kb7 153. Ka2 Kc7 154. Kb1 Kc6 155. Ka1
+Kb5 156. Kb2 Kc6 157. Kb3 Kb5 158. Kb2 Kc5 159. Ka1 Kc4 160. Ka2 Kd5 161. Kb3
+Kd6 162. Kc4 Kd7 163. Kb4 Kd6 164. Ka3 Kc5 165. Ka2 Kc4 166. Kb2 Kb4 167. Kc1
+Kxa5 168. Kd2 Ka4 169. Kd1 Ka3 170. Kc2 Kb4 171. Kd3 Ka4 172. Kc3 Kb5 173. Kd4
+Kb4 174. Ke5 a5 175. Kf6 Kc4 176. Kg7 a4 177. Kh6 Kc3 178. Kg5 Kb3 179. Kg6 Kc4
+180. Kh7 Kd4 181. Kh6 Kd3 182. Kg7 Kd2 183. Kf8 Kd3 184. Kf7 Kc2 185. Kf8 Kc1
+186. Kf7 Kc2 187. Kf8 Kb1 188. Kg7 Kc1 189. Kh6 Kd1 190. Kh7 Ke1 191. Kg7 Kf2
+192. Kg8 Kf3 193. Kh7 a3 194. Kh8 Ke3 195. Kg7 Ke2 196. Kf8 a2 197. Kf7 Kf2
+198. Kg7 a1=R 199. Kf6 Ke2 200. Ke7 Kf3 201. Kd7 Ra4 202. Kd6 Rd4+ 203. Kc7 Rd6
+204. Kxd6 {Draw by insufficient mating material} 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "2"]
+[White "ModemCE2"]
+[Black "ModemCE1"]
+[Result "0-1"]
+[ECO "A10"]
+[GameDuration "00:00:01"]
+[GameEndTime "2026-11-22T19:05:39.001 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:37.884 SE Asia Standard Time"]
+[Opening "English Opening"]
+[PlyCount "394"]
+[TimeControl "3+0.03"]
+
+1. c4 h5 2. Nc3 h4 3. e3 Nf6 4. a3 d5 5. Ke2 Be6 6. Rb1 Bf5 7. d4 b6 8. Qc2 Kd7
+9. Bd2 Ne4 10. f3 Nf6 11. Bc1 g6 12. Qxf5+ Ke8 13. g3 Nfd7 14. Qxf7+ Kxf7
+15. Bd2 Qc8 16. cxd5 Rh6 17. Rc1 hxg3 18. Bh3 Rh4 19. hxg3 Bh6 20. g4 Kg8 21. b4
+Kf7 22. Bg2 Qh8 23. Kd1 Bg7 24. Kc2 Nf6 25. d6 g5 26. Kd1 a5 27. b5 Nfd7 28. Ne4
+Ne5 29. Ng3 Bf8 30. Kc2 Kg8 31. f4 Nec6 32. Nh5 Bg7 33. Re1 Nxd4+ 34. exd4 Nd7
+35. f5 Rxh5 36. dxc7 Bxd4 37. Re2 Rh2 38. Bb7 Bf6 39. Be3 Ra7 40. Kb1 Qh3
+41. c8=N Qxg4 42. Bf4 Nc5 43. Bd5+ Kh7 44. Rf2 Ne6 45. Rhxh2+ Kg8 46. Nxb6 Ra8
+47. Bd6 Qd4 48. Rh6 Qd2 49. Rh4 Kf7 50. Rc4 Qb4+ 51. Rxb4 Rg8 52. Nc8 Ke8
+53. Ra2 Be5 54. b6 Rf8 55. Na7 Nf4 56. Bc5 Kd7 57. Bb7 Bg7 58. Bc6+ Kd8 59. Nh3
+e5 60. Rd2+ Nd5 61. Rb5 Rf7 62. Ra2 Rf6 63. a4 Rg6 64. Nc8 Bh6 65. Kb2 Rf6
+66. Ka3 e4 67. Nf4 g4 68. Rbb2 g3 69. Re2 Rg6 70. Ne7 Nc7 71. Bf2 Bg5 72. Re3
+Ne6 73. Nh5 Nf8 74. Bb7 Rg7 75. Rd3+ Kxe7 76. Rd7+ Nxd7 77. Be3 Rg8 78. Ng7 Bxe3
+79. Rb2 Bd2 80. Bxe4 Be3 81. b7 Rf8 82. Rc2 Rc8 83. b8=Q Nf8 84. Kb3 Nd7
+85. Qxg3 Nf8 86. Ne8 Ng6 87. Qf3 Rc3+ 88. Ka2 Kxe8 89. Bd3 Bg1 90. Qf4 Be3
+91. Bb5+ Rc6 92. Qe5+ Kf8 93. Qc5+ Rxc5 94. Ka1 Nf4 95. Bc6 Rxf5 96. Be8 Rc5
+97. Rb2 Rg5 98. Ka2 Ne6 99. Re2 Rg8 100. Kb3 Bf2 101. Rb2 Ba7 102. Ka3 Rg7
+103. Rb6 Rg8 104. Rb5 Bb6 105. Rb3 Bd8 106. Rb4 Bc7 107. Rd4 Rg1 108. Bg6 Rg2
+109. Bh7 Ke7 110. Bf5 Ra2+ 111. Kxa2 Bh2 112. Rf4 Bg3 113. Kb1 Nd8 114. Rh4 Nc6
+115. Bg6 Bf2 116. Bc2 Na7 117. Ka1 Kf6 118. Bd3 Bxh4 119. Bc2 Ke7 120. Bf5 Kf8
+121. Bh7 Be1 122. Kb1 Bg3 123. Bg6 Bc7 124. Bf5 Be5 125. Bg6 Bg3 126. Bd3 Ke8
+127. Bc2 Nc6 128. Ka1 Kf7 129. Bb1 Bb8 130. Kb2 Bh2 131. Kc1 Ne7 132. Bg6+ Kf6
+133. Bc2 Bb8 134. Bh7 Kg7 135. Kd1 Kh8 136. Kd2 Nc6 137. Bg6 Bg3 138. Bb1 Be1+
+139. Ke2 Kg7 140. Bh7 Ne5 141. Kf1 Nd7 142. Bg6 Bf2 143. Bf7 Nb8 144. Bg8 Bd4
+145. Bh7 Na6 146. Bb1 Kh6 147. Bc2 Bf2 148. Be4 Be3 149. Bb7 Bd2 150. Kf2 Nb8
+151. Bf3 Bf4 152. Bd1 Bd2 153. Kg3 Be1+ 154. Kh2 Kg7 155. Bf3 Na6 156. Kh1 Kf7
+157. Be4 Nb4 158. Bg6+ Kg7 159. Bd3 Nxd3 160. Kg2 Bc3 161. Kg3 Be1+ 162. Kh3 Bc3
+163. Kg3 Nc1 164. Kh4 Kh6 165. Kg4 Bf6 166. Kf5 Na2 167. Kxf6 Kh7 168. Kf7 Kh8
+169. Kg6 Nc3 170. Kh6 Nxa4 171. Kg5 Nc3 172. Kf6 Kg8 173. Kg6 Kh8 174. Kh6 a4
+175. Kg5 Ne4+ 176. Kh6 Ng5 177. Kxg5 a3 178. Kg4 Kh7 179. Kf4 Kh8 180. Ke5 Kh7
+181. Kf5 Kh8 182. Kg4 a2 183. Kh5 Kg8 184. Kh6 Kf8 185. Kg6 Ke8 186. Kf6 a1=R
+187. Kg5 Re1 188. Kh6 Re5 189. Kh7 Re6 190. Kg7 Rd6 191. Kh7 Rd2 192. Kh6 Rf2
+193. Kg7 Rf3 194. Kh7 Kf7 195. Kh8 Rf1 196. Kh7 Rb1 197. Kh8 Rh1# {Black mates}
+0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "2"]
+[White "ModemCE1"]
+[Black "ModemCE2"]
+[Result "1-0"]
+[ECO "A00"]
+[GameDuration "00:00:00"]
+[GameEndTime "2026-11-22T19:05:39.585 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:39.007 SE Asia Standard Time"]
+[Opening "Saragossa Opening"]
+[PlyCount "229"]
+[TimeControl "3+0.03"]
+
+1. c3 a5 2. a3 g5 3. Qc2 Nc6 4. e4 h6 5. Qd1 Rh7 6. Qa4 h5 7. c4 Ne5 8. Nc3 Ra6
+9. Qxd7+ Kxd7 10. Nge2 c5 11. Nd5 Re6 12. Ne3 f6 13. Nd4 Ra6 14. Ndc2 e6 15. Be2
+f5 16. Nf1 Nc6 17. d4 Kd6 18. Nb4 Nxd4 19. Kd2 Nc2 20. h4 Qd7 21. f4 Nf6 22. Bf3
+Rg7 23. Rh2 Ng8 24. exf5 cxb4 25. g4 bxa3 26. Bd1 Qb5 27. Rxa3 Ne7 28. Rhh3 Rh7
+29. Rhf3 Rf7 30. Rab3 Kc7 31. Kxc2 Ng8 32. Rf2 Kd8 33. Ng3 Qxf5+ 34. Rd3+ Rd6
+35. Ne2 e5 36. Kc3 Bg7 37. gxh5 Bf6 38. Bd2 Qh3 39. hxg5 Qg2 40. Ba4 Qg1
+41. Nxg1 Rd5 42. Rg3 Bh3 43. Bc2 Bg2 44. Bd1 Rb5 45. Kc2 Rf8 46. Be1 Bxg5 47. c5
+a4 48. Kc3 Rf7 49. c6 Nf6 50. Bc2 Rh7 51. Bg6 b6 52. Rd3+ Rd5 53. f5 Rg7
+54. Rfd2 Bh1 55. b4 Ra7 56. Bf2 Rdd7 57. cxd7 Bh6 58. Bf7 Kc7 59. d8=B+ Kc6
+60. Bd4 Be4 61. Rf2 Ng8 62. Kc2 Bg7 63. Rf3 Bh8 64. Ba1 Re7 65. Rf2 Nh6 66. Be8+
+Kb7 67. Bc3 Bg7 68. Bc6+ Ka7 69. Be8 Bc6 70. Bd4 Rd7 71. Ra3 Rxd4 72. Rd2 Rg4
+73. Rh2 Bb5 74. Bg6 Re4 75. Kc1 Bf6 76. Rha2 Ng8 77. Rb2 Bxd8 78. Rg2 Rc4+
+79. Rc3 Bg5+ 80. Rxg5 Bd7 81. Kb1 Ka6 82. Rcg3 Rh4 83. Rc3 Rxh5 84. Rg4 Rh4
+85. Rf4 Ne7 86. Ka2 Bc6 87. Rcf3 Bd7 88. Rc4 Rh2+ 89. Ka3 Ra2+ 90. Kxa2 Kb7
+91. f6 Ka7 92. Ka3 Nd5 93. Be4 Nc7 94. Bc2 Bc6 95. b5 Na8 96. Rf5 Bh1 97. Be4
+Bf3 98. Rxa4+ Kb8 99. Ra6 Kc7 100. Bxf3 Kd7 101. Nh3 Kd6 102. Bg2 Nc7 103. Bd5
+Kxd5 104. Rg5 Ke4 105. Nf4 Kxf4 106. Rg4+ Ke3 107. Rga4 Kd2 108. Rd4+ Kc1
+109. Rd7 Nxb5+ 110. Kb3 Nc7 111. Ra2 e4 112. Ra4 Ne8 113. Ra2 Ng7 114. Ra6 Ne8
+115. Ra1# {White mates} 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "3"]
+[White "ModemCE2"]
+[Black "ModemCE1"]
+[Result "1/2-1/2"]
+[ECO "A00"]
+[GameDuration "00:00:01"]
+[GameEndTime "2026-11-22T19:05:41.259 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:39.592 SE Asia Standard Time"]
+[Opening "Anti-Borg (Desprez) Opening"]
+[PlyCount "349"]
+[TimeControl "3+0.03"]
+
+1. h4 g5 2. c3 c5 3. a4 Bg7 4. g3 Be5 5. b4 e6 6. Ra3 b6 7. h5 d6 8. Bb2 Bxc3
+9. a5 h6 10. Nf3 Qd7 11. Qb3 Bg7 12. Bc1 d5 13. Ra2 Ba6 14. Ra1 Qd6 15. Qa4+ Nd7
+16. Rh3 g4 17. Nd4 Bb7 18. Na3 Rb8 19. Qxd7+ Kxd7 20. Nf5 Rc8 21. Bg2 gxh3
+22. Ne7 h2 23. Nb5 h1=R+ 24. Bxh1 Rd8 25. Nc6 Nf6 26. Be4 Rhe8 27. f3 Ba8 28. d4
+Qxg3+ 29. Kd2 Qg5+ 30. e3 Rh8 31. Bf5 Ne4+ 32. Bxe4 Rc8 33. Nc3 a6 34. Ne2 Rb8
+35. Kd3 f6 36. Bg6 Qf5+ 37. Bxf5 Bxc6 38. Be4 Bb7 39. Ng1 Rbg8 40. Bd2 Bf8
+41. Ra3 Ba8 42. Bh7 Rg7 43. Kc3 Bd6 44. Kb3 Rd8 45. Bg6 Rf7 46. bxc5 Bf4 47. Bf5
+Bb7 48. Ra4 bxa5 49. exf4 Ke7 50. Ra3 exf5 51. Be3 Rd6 52. Ka2 Rg7 53. Rc3 Ke6
+54. Kb2 Rf7 55. Ka3 Kd7 56. Rc1 Ke6 57. Kb2 Rb6+ 58. Kc3 Rf8 59. Ra1 Rb5 60. Bc1
+Ra8 61. Kc2 Kf7 62. c6 Rb6 63. Ra2 Rc8 64. Ra1 Ke6 65. Be3 Rcxc6+ 66. Kd1 Rc5
+67. Bc1 Kd6 68. Ra3 Rb2 69. Nh3 Rb1 70. dxc5+ Kxc5 71. Ke2 a4 72. Kf2 Rb6
+73. Ke1 Rd6 74. Re3 Kb6 75. Ba3 a5 76. Bxd6 Ba8 77. Re8 a3 78. Kd2 Bc6 79. Rg8
+Kb7 80. Ng5 Bd7 81. Rd8 Ka6 82. Ne4 Kb5 83. Ke2 Bc8 84. Bb8 fxe4 85. Rxd5+ Ka4
+86. Be5 Be6 87. Rd8 Bf5 88. Kf1 fxe5 89. Kg2 Bg6 90. Rf8 exf4 91. Rb8 Bxh5
+92. Kh3 a2 93. fxe4 Bg6 94. Rb3 Bf7 95. Rb8 Bg6 96. Ra8 a1=B 97. Re8 Bb2 98. Kg2
+Bg7 99. Kh1 Bb2 100. Re6 h5 101. Rc6 Bh8 102. e5 Be4+ 103. Kg1 Kb4 104. Kf1 Bc2
+105. Rc8 Bd1 106. Rf8 Kc4 107. Rg8 h4 108. Kf2 Bh5 109. Rb8 Bd1 110. Rb5 Kxb5
+111. Kg2 Kb4 112. Kh1 a4 113. e6 Bd4 114. e7 Bg1 115. e8=R h3 116. Re6 Bf3+
+117. Kxg1 Kb5 118. Rh6 a3 119. Kf2 Be4 120. Rg6 Bc2 121. Kf3 Ba4 122. Rg2 Ka6
+123. Rg6+ Kb7 124. Re6 Ka8 125. Ke2 Bc6 126. Re4 Kb7 127. Kf2 Kc8 128. Rd4 Ba4
+129. Rc4+ Kd8 130. Ke1 a2 131. Rxa4 a1=Q+ 132. Rxa1 Kc8 133. Ra6 f3 134. Kf2 Kb7
+135. Kg1 Kc7 136. Ra5 Kc6 137. Rf5 Kd7 138. Rc5 Ke8 139. Rc7 h2+ 140. Kh1 Kd8
+141. Rc8+ Kd7 142. Rc2 Ke6 143. Rc4 Ke7 144. Rc6 Ke8 145. Rd6 f2 146. Rd4 f1=B
+147. Rh4 Kd8 148. Rd4+ Kc8 149. Rb4 Be2 150. Rb8+ Kd7 151. Re8 Ba6 152. Re4 Kc8
+153. Rc4+ Bxc4 154. Kg2 Kb8 155. Kf3 Bg8 156. Kf4 Be6 157. Kg3 h1=Q 158. Kf2 Bc8
+159. Ke2 Bh3 160. Kd3 Bc8 161. Kc4 Kb7 162. Kb4 Qe4+ 163. Kb3 Qh7 164. Kc3 Be6
+165. Kb4 Ka7 166. Kc5 Bd5 167. Kd4 Kb6 168. Kc3 Kc7 169. Kb4 Qe7+ 170. Ka5 Be6
+171. Ka6 Qf8 172. Ka7 Qg8 173. Ka6 Bd7 174. Ka7 Qa8+
+175. Kxa8 {Draw by insufficient mating material} 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "3"]
+[White "ModemCE1"]
+[Black "ModemCE2"]
+[Result "1-0"]
+[ECO "A40"]
+[GameDuration "00:00:00"]
+[GameEndTime "2026-11-22T19:05:41.632 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:41.270 SE Asia Standard Time"]
+[Opening "Queen's pawn"]
+[PlyCount "153"]
+[TimeControl "3+0.03"]
+
+1. d4 g5 2. Kd2 c5 3. d5 e5 4. dxe6 f6 5. Nh3 Qe7 6. b3 dxe6 7. Ba3 Qg7 8. Qc1
+h6 9. Qb2 h5 10. Qxf6 Qg6 11. e4 Rh6 12. Rg1 Qh7 13. Qxe6+ Ne7 14. Ke2 b5
+15. Qf6 Qg7 16. Qxf8+ Kd7 17. Kd2 Kc6 18. Rh1 Rd6+ 19. Bd3 Ba6 20. Qe8+ Kb6
+21. Bb2 Rf6 22. Rd1 Rf3 23. g3 Qg6 24. e5 c4 25. Qh8 cxd3 26. e6 Rf7 27. Kc1 g4
+28. Nc3 Rh7 29. a4 Nd7 30. Na2 Kc6 31. Bf6 Kd6 32. Bc3 Qg7 33. Rb1 Qg6 34. Qxh7
+Ng8 35. Kd2 Kc7 36. Qxh5 Qxe6 37. Qe8 Qg6 38. Nc1 Rc8 39. Qe1 gxh3 40. Ba1 Qb6
+41. Qe7 Qb8 42. c4 Re8 43. Qf7 bxc4 44. Rh1 Bc8 45. Qe7 Qb7 46. Bh8 Nxe7 47. Ke1
+Qa8 48. Ra1 Qg2 49. Bc3 Nb6 50. Kd2 Kd8 51. Bf6 Qg1 52. Bb2 Qg2 53. Re1 Qb7
+54. f3 cxb3 55. Bg7 Kd7 56. Re5 Rh8 57. Rg5 Nc6 58. Kc3 Nxa4+ 59. Kc4 d2 60. Rc5
+Nb4 61. Rxc8 Rg8 62. Na2 Qe4+ 63. Kb5 Re8 64. Be5 Qd5+ 65. Rc5 Re7 66. Nc3 Re6
+67. Rxd5+ Rd6 68. Bh8 Nb2 69. Rd4 Kc8 70. Rb1 a6+ 71. Ka5 Rh6 72. Rc1 Rb6
+73. Rd5 N4d3 74. Kxb6 Ne1 75. Rd1 Nc2 76. Rf1 Kb8 77. Rd8# {White mates} 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "4"]
+[White "ModemCE2"]
+[Black "ModemCE1"]
+[Result "1/2-1/2"]
+[ECO "A01"]
+[GameDuration "00:00:02"]
+[GameEndTime "2026-11-22T19:05:44.131 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:41.638 SE Asia Standard Time"]
+[Opening "Nimzowitsch-Larsen attack"]
+[PlyCount "438"]
+[TimeControl "3+0.03"]
+[Variation "Indian variation"]
+
+1. b3 Nf6 2. Bb2 g5 3. e4 a5 4. Qc1 c6 5. Nf3 d5 6. Na3 Ng8 7. g4 Be6 8. Nb5
+Bxg4 9. Qb1 Bh5 10. h4 b6 11. hxg5 Bg7 12. Nc3 f5 13. Ba3 dxe4 14. Kd1 Bf6
+15. Ke2 e5 16. Rh4 Qc7 17. Rg4 Be7 18. Nb5 Qd6 19. Rf4 Nf6 20. Nd4 b5 21. Nxb5
+Qd3+ 22. Kd1 Ng4 23. Bd6 Qxb3 24. Bxe7 Qe3 25. Bc4 Nh2 26. Qb3 Nxf3 27. Na7 Na6
+28. Qa4 Nxd2+ 29. Be2 h6 30. Qb5 Kd7 31. Kc1 Rhg8 32. Bd3 Nb1+ 33. Kb2 hxg5
+34. f3 cxb5 35. Ba3 Rae8 36. Bxb5+ Kc7 37. Bb4 Qxf3 38. Bxa6 a4 39. Nc8 e3
+40. Bb5 Qh3 41. Bxa4 Qh4 42. a3 Bf3 43. c3 Rh8 44. Kc2 Bd1+ 45. Kb2 Qh5 46. Rh4
+g4 47. Rh1 e4 48. Bxe8 Nd2 49. c4 Bb3 50. Rac1 Qh7 51. Bf7 Kxc8 52. Rxh7 Kd8
+53. Bc5 Nf1 54. Bxe3 Rxh7 55. Rb1 Nd2 56. Bb6+ Kd7 57. Bg6 e3 58. Bf7 e2 59. Ba7
+Rg7 60. Bg8 Kc7 61. Bh7 Kd8 62. Bc5 Re7 63. Be3 Bc2 64. Bg8 Nf1 65. Kxc2 Nh2
+66. Bd4 f4 67. Rb3 Rd7 68. Re3 Kc7 69. Be5+ Kb7 70. Re4 e1=B 71. Bh7 Rd1 72. Bc7
+Rd2+ 73. Kc1 Rc2+ 74. Kb1 Kxc7 75. a4 Rb2+ 76. Kxb2 Bh4 77. Kc3 Bg5 78. Re3 Be7
+79. Rh3 Nf3 80. Rh5 Kd6 81. Rh2 Ke5 82. Be4 Nd4 83. Ra2 Bd8 84. Bh7 Ne6 85. Ra3
+f3 86. Kd3 Nf4+ 87. Kc3 Nd3 88. a5 Bh4 89. Ra2 Nb2 90. Kb4 Nd3+ 91. Bxd3 Be7+
+92. Kb5 Bf8 93. Bh7 Kd6 94. Kb6 f2 95. Kb5 g3 96. Bc2 Ke6 97. Bb3 Bb4 98. Ra1
+Kd6 99. a6 f1=N 100. Rd1+ Nd2 101. Rc1 Ke5 102. Rc3 g2 103. Ka4 Ne4 104. Rd3 Be7
+105. Rd5+ Kf4 106. Kb5 Nf2 107. Rd2 Bc5 108. Ra2 Kg5 109. Rxf2 g1=Q 110. Ka4 Kg4
+111. Rg2+ Kf4 112. Ra2 Qg8 113. Rg2 Qb8 114. Rd2 Qa7 115. Rd8 Qa8 116. Rg8 Bf2
+117. a7 Qb7 118. Rc8 Bc5 119. Bc2 Qf3 120. Bd3 Qg3 121. Bf1 Qb3+ 122. Kxb3 Ke4
+123. Rf8 Kd4 124. Rf6 Bb6 125. Be2 Bd8 126. Bd3 Kc5 127. Rf7 Bb6 128. Kb2 Bd8
+129. Ka2 Bh4 130. Bc2 Bf2 131. Rf8 Kc6 132. Kb1 Kb6 133. Bd1 Bg3 134. Bh5 Bc7
+135. Bf3 Bh2 136. Ka2 Bb8 137. Rf7 Ka5 138. axb8=B Ka6 139. Bf4 Ka5 140. Be4 Ka4
+141. Be3 Ka5 142. Rf4 Kb4 143. Bf3 Kc3 144. Bd1 Kb4 145. Bf3 Ka4 146. Bd4 Kb4
+147. Rf7 Ka4 148. Rf5 Kb4 149. Rf8 Ka4 150. Bg2 Kb4 151. Bf6 Kxc4 152. Kb1 Kb4
+153. Ba8 Kc4 154. Bd8 Kb5 155. Kc1 Kc4 156. Bf3 Kb3 157. Rf5 Ka2 158. Rg5 Ka1
+159. Rh5 Ka2 160. Ba5 Ka3 161. Bb7 Kb3 162. Rg5 Kc4 163. Bc7 Kc3 164. Rb5 Kd4
+165. Bc6 Kc3 166. Rg5 Kc4 167. Rf5 Kd3 168. Rf2 Kc4 169. Bh2 Kb3 170. Ba8 Ka4
+171. Rf7 Ka3 172. Rc7 Ka4 173. Bg3 Ka3 174. Rb7 Ka4 175. Be1 Ka3 176. Kc2 Ka4
+177. Rb1 Ka3 178. Rb5 Ka4 179. Rb4+ Ka5 180. Be4 Ka6 181. Rb1 Ka7 182. Bf2+ Ka6
+183. Ba7 Ka5 184. Kb3 Kb5 185. Ka3+ Kc4 186. Bb8 Kc3 187. Bh7 Kd2 188. Rh1 Ke3
+189. Rh2 Kf3 190. Be4+ Kxe4 191. Ba7 Kf5 192. Bb8 Kg6 193. Rh4 Kf6 194. Rh3 Ke7
+195. Bh2 Kf7 196. Rc3 Ke7 197. Kb2 Kd7 198. Ka2 Kd8 199. Rb3 Kd7 200. Ra3 Ke7
+201. Rd3 Kf8 202. Rd8+ Kf7 203. Rc8 Ke7 204. Kb3 Kf7 205. Rc5 Kf6 206. Bd6 Kg6
+207. Bh2 Kh7 208. Ka3 Kh6 209. Bf4+ Kg6 210. Re5 Kh7 211. Kb3 Kh8 212. Ka4 Kh7
+213. Rh5+ Kg7 214. Rh8 Kf6 215. Rc8 Ke6 216. Rd8 Ke7 217. Rg8 Kf6 218. Bh6 Kf7
+219. Re8 Kxe8 {Draw by insufficient mating material} 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.11.22"]
+[Round "4"]
+[White "ModemCE1"]
+[Black "ModemCE2"]
+[Result "1/2-1/2"]
+[ECO "A03"]
+[GameDuration "00:00:01"]
+[GameEndTime "2026-11-22T19:05:45.715 SE Asia Standard Time"]
+[GameStartTime "2026-11-22T19:05:44.142 SE Asia Standard Time"]
+[Opening "Bird's Opening"]
+[PlyCount "357"]
+[TimeControl "3+0.03"]
+
+1. f4 d5 2. b4 a5 3. Nh3 g5 4. c4 e6 5. g3 f6 6. Qc2 axb4 7. Kf2 Bh6 8. Qd1 g4
+9. Ng5 Na6 10. Nxe6 Bxf4 11. Nd4 Qd6 12. Qc2 Rb8 13. Nb5 c5 14. N5c3 Qe5 15. Ke1
+d4 16. Ba3 Qxe2+ 17. Kxe2 dxc3 18. Bc1 Bd6 19. Bg2 b6 20. Kd3 Bf8 21. Rg1 Bb7
+22. Ke3 Bd5 23. Bh3 Bf7 24. Qg6 hxg6 25. Rg2 Ke7 26. Na3 Nc7 27. d4 Nd5+ 28. Ke4
+Rh6 29. Rb2 Nc7 30. d5 cxb2 31. Kd3 Na8 32. Bxh6 Kd6 33. Bd2 Ne7 34. Rb1 gxh3
+35. Bc3 Bh6 36. Rh1 Rb7 37. Rg1 b1=B+ 38. Nc2 Be3 39. Rd1 Kd7 40. Bb2 Be8
+41. Ke2 Bg1 42. d6 Bxa2 43. Na1 Bxc4+ 44. Kf3 Bf2 45. Ke4 Be3 46. Rg1 Bb5
+47. Rg2 Kc6 48. Kxe3 Nf5+ 49. Kf2 Nh6 50. Rg1 Be2 51. Ba3 Kd5 52. Bc1 Bf1
+53. Rh1 Ba4 54. Ba3 Rh7 55. Kg1 Ng4 56. Bc1 c4 57. d7 Nc7 58. Bg5 Kd6 59. d8=R+
+Ke6 60. Bh6 Nxh6 61. Ra8 Kd7 62. Nc2 Nd5 63. Rf8 f5 64. Ra8 Nf4 65. Rh8 Nd3
+66. g4 Nc5 67. Na1 Rxh8 68. Kf2 f4 69. Kxf1 Nd3 70. Nb3 Rf8 71. g5 Rh8 72. Nc5+
+Ke7 73. Nd7 Nc5 74. Ne5 Ne4 75. Kg1 Bc2 76. Nd7 Ng4 77. Kf1 Nd2+ 78. Ke1 Nf6
+79. Nxf6 Nf1 80. Ne8 b5 81. Kf2 Rf8 82. Nc7 c3 83. Ke2 f3+ 84. Ke1 Ba4 85. Na6
+Bd1 86. Nb8 Rf5 87. Kxd1 f2 88. Nd7 Nd2 89. Nf6 Rxf6 90. gxf6+ Kf7 91. Kc1 Kg8
+92. Rg1 Ne4 93. Rxg6+ Kh8 94. Rg7 Ng5 95. Rd7 f1=N 96. f7 Kg7 97. Rd4 b3 98. Rd1
+Kh7 99. Kb1 Nd2+ 100. Rxd2 b2 101. f8=N+ Kh8 102. Rd4 Kg8 103. Nd7 Ne4 104. Rc4
+Nf6 105. Rd4 Kg7 106. Rd2 Kh7 107. Rd6 Ne8 108. Nb8 Nc7 109. Rd8 Ne6 110. Rf8
+Nd8 111. Na6 Nc6 112. Rd8 b4 113. Rd2 Ne7 114. Rd8 c2+ 115. Kxc2 b1=N 116. Nc5
+Kg7 117. Rh8 Kf6 118. Re8 b3+ 119. Kxb3 Nd2+ 120. Kb4 Nf5 121. Re6+ Kf7 122. Nb3
+Ng7 123. Rg6 Ne6 124. Rg8 Ne4 125. Ka5 Nc7 126. Kb4 Kf6 127. Rb8 Kf7 128. Rd8
+Nd5+ 129. Rxd5 Nc5 130. Rd2 Kf8 131. Nc1 Kg8 132. Kb5 Kg7 133. Rd8 Ne4 134. Rg8+
+Kf6 135. Na2 Ke6 136. Rg1 Ke5 137. Rg3 Ng5 138. Nc1 Kd5 139. Re3 Ne6 140. Rf3
+Nf8 141. Ne2 Nh7 142. Re3 Kd6 143. Re5 Kd7 144. Rd5+ Ke8 145. Kc6 Kf8 146. Rd3
+Ke8 147. Kb6 Nf6 148. Rd2 Ne4 149. Nc1 Nc3 150. Ka5 Nd5 151. Rc2 Nf4 152. Rb2
+Kd8 153. Rc2 Nd3 154. Rc8+ Ke7 155. Rf8 Ne1 156. Ne2 Ke6 157. Rf2 Kd6 158. Nc3
+Ng2 159. Rf8 Ke5 160. Nd1 Nh4 161. Rb8 Kf4 162. Rf8+ Nf5 163. Kb6 Kf3 164. Kc5
+Ke4 165. Rf6 Kd3 166. Kd5 Nh4 167. Rf1 Ke2 168. Ne3 Nf3 169. Ke6 Kd2 170. Nc2
+Nh4 171. Rf6 Ng6 172. Rf2+ Kc3 173. Na1 Kc4 174. Rf1 Nh4 175. Rc1+ Kd3 176. Ke5
+Ng2 177. Re1 Kc3 178. Rc1+ Kb2 179. Kf6 {Draw by fifty moves rule} 1/2-1/2
+

@@ -1,0 +1,43 @@
+Command: <PROJECT>\tools\cutechess-1.5.1\cutechess-1.5.1-win64\cutechess-cli.exe -engine cmd=<PROJECT>\dist\ModemCE2.exe name=ModemCE2 -engine cmd=<PROJECT>\dist\ModemCE1.exe name=ModemCE1 -each proto=uci tc=3+0.03 timemargin=1000 -games 2 -rounds 4 -concurrency 1 -maxmoves 200 -pgnout <PROJECT>\benchmarks\2026-11-22-3s\ModemCE2-vs-ModemCE1.pgn
+
+Started game 1 of 8 (ModemCE2 vs ModemCE1)
+Finished game 1 (ModemCE2 vs ModemCE1): 0-1 {Black mates}
+Score of ModemCE2 vs ModemCE1: 0 - 1 - 0  [0.000] 1
+Started game 2 of 8 (ModemCE1 vs ModemCE2)
+Finished game 2 (ModemCE1 vs ModemCE2): 1/2-1/2 {Draw by insufficient mating material}
+Score of ModemCE2 vs ModemCE1: 0 - 1 - 1  [0.250] 2
+Started game 3 of 8 (ModemCE2 vs ModemCE1)
+Finished game 3 (ModemCE2 vs ModemCE1): 0-1 {Black mates}
+Score of ModemCE2 vs ModemCE1: 0 - 2 - 1  [0.167] 3
+Started game 4 of 8 (ModemCE1 vs ModemCE2)
+Finished game 4 (ModemCE1 vs ModemCE2): 1-0 {White mates}
+Score of ModemCE2 vs ModemCE1: 0 - 3 - 1  [0.125] 4
+Started game 5 of 8 (ModemCE2 vs ModemCE1)
+Finished game 5 (ModemCE2 vs ModemCE1): 1/2-1/2 {Draw by insufficient mating material}
+Score of ModemCE2 vs ModemCE1: 0 - 3 - 2  [0.200] 5
+Started game 6 of 8 (ModemCE1 vs ModemCE2)
+Finished game 6 (ModemCE1 vs ModemCE2): 1-0 {White mates}
+Score of ModemCE2 vs ModemCE1: 0 - 4 - 2  [0.167] 6
+Started game 7 of 8 (ModemCE2 vs ModemCE1)
+Finished game 7 (ModemCE2 vs ModemCE1): 1/2-1/2 {Draw by insufficient mating material}
+Score of ModemCE2 vs ModemCE1: 0 - 4 - 3  [0.214] 7
+Started game 8 of 8 (ModemCE1 vs ModemCE2)
+Finished game 8 (ModemCE1 vs ModemCE2): 1/2-1/2 {Draw by fifty moves rule}
+Score of ModemCE2 vs ModemCE1: 0 - 4 - 4  [0.250] 8
+...      ModemCE2 playing White: 0 - 2 - 2  [0.250] 4
+...      ModemCE2 playing Black: 0 - 2 - 2  [0.250] 4
+...      White vs Black: 2 - 2 - 4  [0.500] 8
+Elo difference: -190.8 +/- 188.8, LOS: 2.3 %, DrawRatio: 50.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: ModemCE2
+   "Draw by fifty moves rule": 1
+   "Draw by insufficient mating material": 3
+   "Loss: Black mates": 2
+   "Loss: White mates": 2
+Player: ModemCE1
+   "Draw by fifty moves rule": 1
+   "Draw by insufficient mating material": 3
+   "Win: Black mates": 2
+   "Win: White mates": 2
+Finished match

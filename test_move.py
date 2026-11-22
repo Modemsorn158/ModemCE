@@ -49,6 +49,34 @@ class SearchTests(unittest.TestCase):
         self.assertLess(move.time_budget(board, {"movetime": 1000}), 1.0)
         self.assertIsNone(move.time_budget(board, {"depth": 3}))
 
+    def test_move_ordering_prefers_valuable_captures_and_promotions(self):
+        board = chess.Board("4k3/8/8/3q1p2/4P3/8/8/4K3 w - - 0 1")
+        self.assertGreater(move.move_order_score(board, chess.Move.from_uci("e4d5")),
+                           move.move_order_score(board, chess.Move.from_uci("e4f5")))
+        promotion = chess.Board("4k3/P7/8/8/8/8/8/4K3 w - - 0 1")
+        self.assertGreater(move.move_order_score(promotion, chess.Move.from_uci("a7a8q")),
+                           move.move_order_score(promotion, chess.Move.from_uci("a7a8n")))
+
+    def test_ordered_alpha_beta_matches_exhaustive_minimax(self):
+        board = chess.Board("3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1")
+
+        def minimax(position, depth, ply=0):
+            if depth == 0 or position.is_game_over():
+                score = move.evaluate(position)
+                if score == move.MATE_SCORE:
+                    return score - ply
+                if score == -move.MATE_SCORE:
+                    return score + ply
+                return score
+            scores = []
+            for candidate in position.legal_moves:
+                position.push(candidate)
+                scores.append(minimax(position, depth - 1, ply + 1))
+                position.pop()
+            return max(scores) if position.turn == chess.WHITE else min(scores)
+
+        self.assertEqual(move.search(board, 3), minimax(board, 3))
+
     def test_interrupted_iteration_keeps_last_completed_move(self):
         board = chess.Board("3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1")
         original = board.fen()

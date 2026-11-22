@@ -41,6 +41,18 @@ class SearchStopped(Exception):
     pass
 
 
+def move_order_score(board: chess.Board, candidate: chess.Move):
+    """Try valuable captures and promotions first to improve alpha-beta cutoffs."""
+    attacker = board.piece_type_at(candidate.from_square)
+    victim = board.piece_type_at(candidate.to_square)
+    if board.is_en_passant(candidate):
+        victim = chess.PAWN
+    promotion = PIECE_VALUES.get(candidate.promotion, 0)
+    if victim is not None:
+        return 10_000 + 10 * PIECE_VALUES.get(victim, 0) - PIECE_VALUES.get(attacker, 0) + promotion
+    return promotion
+
+
 def search(board: chess.Board, depth: int, alpha=-float("inf"),
            beta=float("inf"), deadline=None, stop=None, ply=0):
     """Alpha-beta minimax, with depth measured in individual moves (plies)."""
@@ -57,7 +69,9 @@ def search(board: chess.Board, depth: int, alpha=-float("inf"),
 
     maximizing = board.turn == chess.WHITE
     best = -float("inf") if maximizing else float("inf")
-    for candidate in sorted(board.legal_moves, key=board.is_capture, reverse=True):
+    for candidate in sorted(board.legal_moves,
+                            key=lambda candidate: move_order_score(board, candidate),
+                            reverse=True):
         board.push(candidate)
         try:
             score = search(board, depth - 1, alpha, beta, deadline, stop, ply + 1)
@@ -115,7 +129,9 @@ def get_move(board: chess.Board, limits=None, stop=None, on_depth=None):
     for depth in range(1, max_depth + 1):
         scores = []
         try:
-            ordered = [best_move] + [candidate for candidate in moves if candidate != best_move]
+            ordered = [best_move] + sorted(
+                (candidate for candidate in moves if candidate != best_move),
+                key=lambda candidate: move_order_score(board, candidate), reverse=True)
             for candidate in ordered:
                 board.push(candidate)
                 try:

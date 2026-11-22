@@ -1,0 +1,44 @@
+[
+  {
+    "fen": "3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1",
+    "depth_plies": 3,
+    "ModemCE4": {
+      "score_white_cp": 400,
+      "leaf_evaluations": 509,
+      "seconds": 0.010941
+    },
+    "ModemCE5": {
+      "score_white_cp": 400,
+      "leaf_evaluations": 509,
+      "seconds": 0.010823
+    }
+  },
+  {
+    "fen": "r3k2r/ppp2ppp/2n1bn2/3qp3/3P4/2N1PN2/PPP2PPP/R2QKB1R w KQkq - 0 1",
+    "depth_plies": 3,
+    "ModemCE4": {
+      "score_white_cp": 780,
+      "leaf_evaluations": 2714,
+      "seconds": 0.060858
+    },
+    "ModemCE5": {
+      "score_white_cp": 780,
+      "leaf_evaluations": 1513,
+      "seconds": 0.038112
+    }
+  },
+  {
+    "fen": "4k3/1p3pp1/p1p2n1p/3p4/3P4/2P1BN2/PP3PPP/4K3 w - - 0 1",
+    "depth_plies": 3,
+    "ModemCE4": {
+      "score_white_cp": 430,
+      "leaf_evaluations": 565,
+      "seconds": 0.013099
+    },
+    "ModemCE5": {
+      "score_white_cp": 430,
+      "leaf_evaluations": 565,
+      "seconds": 0.014704
+    }
+  }
+]
