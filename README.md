@@ -1,6 +1,6 @@
 # Modem Chess Engine
 
-ModemCE8 is a UCI chess engine for CuteChess. It chooses a random legal move
+ModemCE9 is a UCI chess engine for CuteChess. It chooses a random legal move
 from its opening book when the current position is present. Outside the book,
 it uses iterative deepening and alpha-beta minimax until its time budget is
 exhausted. The last fully searched depth determines the move; simpler positions
@@ -28,6 +28,7 @@ searches are capped at 10% of the remaining time for a move.
 | ModemCE6 | Positional evaluation rewards pawn advancement and piece centralization. |
 | ModemCE7 | Quiescence search extends forcing moves at the search horizon. |
 | ModemCE8 | King evaluation encourages safety early and activity in the endgame. |
+| ModemCE9 | Carries alpha-beta bounds across root moves, rechecking potential ties. |
 
 ModemCE4 already introduced alpha-beta pruning. ModemCE5 improves its move
 ordering; it does not introduce pruning for the first time.
@@ -94,8 +95,8 @@ regenerate the book with `python build_book.py` if the TSVs change.
 Install PyInstaller (`python -m pip install pyinstaller`), then run:
 
 ```powershell
-python -m PyInstaller --onefile --name ModemCE8 --add-data "data/opening_book.json;data" main.py
+python -m PyInstaller --onefile --name ModemCE9 --add-data "data/opening_book.json;data" main.py
 ```
 
-Select `dist/ModemCE8.exe` as a UCI engine in CuteChess. The book is embedded,
+Select `dist/ModemCE9.exe` as a UCI engine in CuteChess. The book is embedded,
 so the executable can be copied on its own. Earlier executables remain separate.

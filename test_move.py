@@ -116,7 +116,7 @@ class SearchTests(unittest.TestCase):
             calls += 1
             if calls > first_depth_count:
                 raise move.SearchStopped
-            return 0
+            return calls
 
         with patch.dict(move.OPENING_BOOK, {}, clear=True), \
              patch.object(move, "search", side_effect=interrupt_during_second_depth):
@@ -124,6 +124,42 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(completed, [1])
         self.assertIn(chosen, board.legal_moves)
         self.assertEqual(board.fen(), original)
+
+    def test_root_researches_tied_bounds_before_choosing(self):
+        board = chess.Board("4k3/8/8/8/8/8/4P3/4K3 w - - 0 1")
+        candidates = list(board.legal_moves)
+        calls = []
+
+        def fake_search(position, depth, alpha=-float("inf"), beta=float("inf"),
+                        deadline=None, stop=None, ply=0):
+            candidate = position.peek()
+            calls.append((candidate, alpha, beta))
+            # All later moves appear tied under the bound but are actually worse.
+            if alpha != -float("inf"):
+                return alpha
+            return 100 if candidate == candidates[0] else 0
+
+        with patch.dict(move.OPENING_BOOK, {}, clear=True), \
+             patch.object(move, "choice", side_effect=lambda items: items[0]), \
+             patch.object(move, "search", side_effect=fake_search):
+            chosen = move.get_move(board, {"depth": 1})
+        self.assertEqual(chosen, candidates[0])
+        self.assertGreater(len(calls), len(candidates))
+
+    def test_root_pruning_matches_full_window_for_both_colors(self):
+        position = chess.Board("3rk3/3p4/8/8/8/8/8/3QK3 w - - 0 1")
+        for board in (position, position.mirror()):
+            original = board.fen()
+            scores = {}
+            for candidate in board.legal_moves:
+                board.push(candidate)
+                scores[candidate] = move.search(board, 1, ply=1)
+                board.pop()
+            target = max(scores.values()) if board.turn == chess.WHITE else min(scores.values())
+            with patch.dict(move.OPENING_BOOK, {}, clear=True):
+                chosen = move.get_move(board, {"depth": 2})
+            self.assertEqual(scores[chosen], target)
+            self.assertEqual(board.fen(), original)
 
 
 if __name__ == "__main__":

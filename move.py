@@ -202,6 +202,8 @@ def get_move(board: chess.Board, limits=None, stop=None, on_depth=None):
     max_depth = max(1, limits.get("depth", 64))
     for depth in range(1, max_depth + 1):
         scores = []
+        alpha, beta = -float("inf"), float("inf")
+        maximizing = board.turn == chess.WHITE
         try:
             ordered = [best_move] + sorted(
                 (candidate for candidate in moves if candidate != best_move),
@@ -209,9 +211,19 @@ def get_move(board: chess.Board, limits=None, stop=None, on_depth=None):
             for candidate in ordered:
                 board.push(candidate)
                 try:
-                    scores.append(search(board, depth - 1, deadline=deadline, stop=stop, ply=1))
+                    score = search(board, depth - 1, alpha, beta, deadline, stop, ply=1)
+                    # A cutoff equal to the current best is only a bound, not
+                    # proof of a tie. Re-search before allowing random tie breaks.
+                    bound = alpha if maximizing else beta
+                    if score == bound and bound not in (-float("inf"), float("inf")):
+                        score = search(board, depth - 1, deadline=deadline, stop=stop, ply=1)
+                    scores.append(score)
                 finally:
                     board.pop()
+                if maximizing:
+                    alpha = max(alpha, score)
+                else:
+                    beta = min(beta, score)
         except SearchStopped:
             break
         best_score = max(scores) if board.turn == chess.WHITE else min(scores)
