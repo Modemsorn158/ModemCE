@@ -19,14 +19,18 @@ def main():
     parser.add_argument("--cli", type=Path, default=DEFAULT_CLI)
     parser.add_argument("--rounds", type=int, default=4, help="two color-swapped games per round")
     parser.add_argument("--tc", default="3+0.03", help="seconds per game + increment per move")
+    parser.add_argument("--first-version", type=int, default=2, help="first newer version to test")
+    parser.add_argument("--last-version", type=int, default=8, help="last newer version to test")
     parser.add_argument("--output", type=Path, required=True, help="new output directory")
     args = parser.parse_args()
     if args.rounds < 1:
         parser.error("--rounds must be positive")
+    if args.first_version < 2 or args.last_version < args.first_version:
+        parser.error("version range must start at 2 or later and end at or after its start")
     cli = args.cli.resolve()
     if not cli.is_file():
         parser.error(f"Cute Chess CLI not found: {cli}")
-    for version in range(1, 6):
+    for version in range(args.first_version - 1, args.last_version + 1):
         if not (ROOT / f"dist/ModemCE{version}.exe").is_file():
             parser.error(f"Missing dist/ModemCE{version}.exe")
     output = args.output.resolve()
@@ -39,7 +43,7 @@ def main():
         "processor": platform.processor(),
         "cutechess_cli_sha256": sha256(cli),
         "engine_sha256": {f"ModemCE{v}": sha256(ROOT / f"dist/ModemCE{v}.exe")
-                          for v in range(1, 6)},
+                          for v in range(args.first_version - 1, args.last_version + 1)},
         "rounds_per_match": args.rounds,
         "games_per_round": 2,
         "time_control": args.tc,
@@ -48,7 +52,7 @@ def main():
         "max_full_moves": 200,
     }
     (output / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
-    for newer in range(2, 6):
+    for newer in range(args.first_version, args.last_version + 1):
         older = newer - 1
         prefix = output / f"ModemCE{newer}-vs-ModemCE{older}"
         command = [str(cli), "-engine", f"cmd={ROOT / f'dist/ModemCE{newer}.exe'}",

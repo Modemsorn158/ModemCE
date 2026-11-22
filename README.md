@@ -64,14 +64,15 @@ an efficiency improvement in every position.
 
 Download the [official Cute Chess 1.5.1 Windows zip](https://github.com/cutechess/cutechess/releases/tag/v1.5.1)
 and extract it under `tools/cutechess-1.5.1`, or specify the CLI path with
-`--cli`. Put the five versioned executables in `dist/` (they are not tracked in
+`--cli`. Put the versioned executables in `dist/` (they are not tracked in
 Git), install `requirements.txt`, then run:
 
 ```powershell
 python benchmarks/run_matches.py --output benchmarks/my-run
 ```
 
-Use `--rounds 50` for 100 games per matchup, for example. Match outcomes and
+Use `--rounds 50` for 100 games per matchup, for example. Use `--first-version`
+and `--last-version` to select a subset of consecutive matchups. Match outcomes and
 timing vary because the engines choose randomly and time-limited search depends
 on the machine. `python benchmarks/compare_ordering.py` compares search leaf
 counts against the ModemCE4 source at a fixed depth.

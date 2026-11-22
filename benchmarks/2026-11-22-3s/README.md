@@ -27,7 +27,7 @@ scores, not a common rating scale.
 
 [ordering-comparison.json](ordering-comparison.json) records a three-ply
 alpha-beta search of three fixed positions using CE4 source from commit
-`14f08fb` and CE5 source from this version. The scores are identical; the
+`14f08fb` and CE5 source from commit `07bb2e1`. The scores are identical; the
 respective CE4/CE5 leaf evaluation counts are 509/509, 2,714/1,513, and
 565/565. Timings are single runs and fluctuate. This microbenchmark measures
 the recursive search, not opening-book play or full games, and does not prove
