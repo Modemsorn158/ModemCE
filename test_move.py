@@ -34,6 +34,16 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(move.evaluate(stalemate), 0)
         self.assertEqual(move.get_move(mate), "0000")
 
+    def test_positional_evaluation_is_symmetric_and_rewards_development(self):
+        self.assertEqual(move.evaluate(chess.Board()), 0)
+        edge = chess.Board("4k3/8/8/8/8/8/8/N3K3 w - - 0 1")
+        center = chess.Board("4k3/8/8/8/3N4/8/8/4K3 w - - 0 1")
+        # Include an opposing pawn so these are not automatic draws.
+        edge.set_piece_at(chess.A7, chess.Piece(chess.PAWN, chess.BLACK))
+        center.set_piece_at(chess.A7, chess.Piece(chess.PAWN, chess.BLACK))
+        self.assertGreater(move.evaluate(center), move.evaluate(edge))
+        self.assertEqual(move.evaluate(center), -move.evaluate(center.mirror()))
+
     def test_book_takes_precedence(self):
         board = chess.Board()
         key = f"{chess.polyglot.zobrist_hash(board):016x}"

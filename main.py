@@ -41,7 +41,7 @@ def run():
             continue
         command = arguments[0]
         if command == "uci":
-            print("id name ModemCE5", flush=True)
+            print("id name ModemCE6", flush=True)
             print("id author modem158", flush=True)
             print("uciok", flush=True)
         elif command == "isready":

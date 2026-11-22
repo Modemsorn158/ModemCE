@@ -1,11 +1,11 @@
 # Modem Chess Engine
 
-ModemCE5 is a UCI chess engine for CuteChess. It chooses a random legal move
+ModemCE6 is a UCI chess engine for CuteChess. It chooses a random legal move
 from its opening book when the current position is present. Outside the book,
 it uses iterative deepening and alpha-beta minimax until its time budget is
 exhausted. The last fully searched depth determines the move; simpler positions
 can reach greater depths. The evaluation counts material and recognizes
-checkmate and automatic draws; equally scored moves are chosen randomly. Book
+checkmate and automatic draws, with modest positional bonuses; equally scored moves are chosen randomly. Book
 choices are uniform among distinct moves and are not evaluated for strength.
 ModemCE5 orders captures by the value of the victim and attacker, and also
 prioritizes promotions, to help alpha-beta pruning find cutoffs earlier.
@@ -25,6 +25,7 @@ searches are capped at 10% of the remaining time for a move.
 | ModemCE3 | Material evaluation and two-ply minimax outside the book. |
 | ModemCE4 | Time-aware iterative deepening and alpha-beta pruning. |
 | ModemCE5 | Improved capture and promotion ordering for the existing alpha-beta search. |
+| ModemCE6 | Positional evaluation rewards pawn advancement and piece centralization. |
 
 ModemCE4 already introduced alpha-beta pruning. ModemCE5 improves its move
 ordering; it does not introduce pruning for the first time.
@@ -88,8 +89,8 @@ regenerate the book with `python build_book.py` if the TSVs change.
 Install PyInstaller (`python -m pip install pyinstaller`), then run:
 
 ```powershell
-python -m PyInstaller --onefile --name ModemCE5 --add-data "data/opening_book.json;data" main.py
+python -m PyInstaller --onefile --name ModemCE6 --add-data "data/opening_book.json;data" main.py
 ```
 
-Select `dist/ModemCE5.exe` as a UCI engine in CuteChess. The book is embedded,
+Select `dist/ModemCE6.exe` as a UCI engine in CuteChess. The book is embedded,
 so the executable can be copied on its own. Earlier executables remain separate.

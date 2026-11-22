@@ -30,11 +30,30 @@ def evaluate(board: chess.Board):
             return 0
         return MATE_SCORE if outcome.winner == chess.WHITE else -MATE_SCORE
 
-    return sum(
+    material = sum(
         value * (len(board.pieces(piece, chess.WHITE)) -
                  len(board.pieces(piece, chess.BLACK)))
         for piece, value in PIECE_VALUES.items()
     )
+    # Modest positional bonuses complement material without overwhelming it.
+    positional = 0
+    for square, piece in board.piece_map().items():
+        file = chess.square_file(square)
+        rank = chess.square_rank(square)
+        advance = rank if piece.color == chess.WHITE else 7 - rank
+        centrality = 6 - abs(2 * file - 7) - abs(2 * rank - 7)
+        if piece.piece_type == chess.PAWN:
+            bonus = 5 * advance + 2 * (3 - abs(2 * file - 7))
+        elif piece.piece_type == chess.KNIGHT:
+            bonus = 5 * centrality
+        elif piece.piece_type == chess.BISHOP:
+            bonus = 3 * centrality
+        elif piece.piece_type == chess.QUEEN:
+            bonus = centrality
+        else:
+            bonus = 0
+        positional += bonus if piece.color == chess.WHITE else -bonus
+    return material + positional
 
 
 class SearchStopped(Exception):
