@@ -20,6 +20,7 @@ PIECE_VALUES = {
     chess.QUEEN: 900,
 }
 MATE_SCORE = 100_000
+BISHOP_PAIR_BONUS = 30
 
 
 def positional_table(piece_type, color, endgame=False):
@@ -63,6 +64,11 @@ def evaluate(board: chess.Board):
                  len(board.pieces(piece, chess.BLACK)))
         for piece, value in PIECE_VALUES.items()
     )
+    white_bishops = board.bishops & board.occupied_co[chess.WHITE]
+    black_bishops = board.bishops & board.occupied_co[chess.BLACK]
+    white_pair = bool(white_bishops & chess.BB_LIGHT_SQUARES) and bool(white_bishops & chess.BB_DARK_SQUARES)
+    black_pair = bool(black_bishops & chess.BB_LIGHT_SQUARES) and bool(black_bishops & chess.BB_DARK_SQUARES)
+    bishop_pair = BISHOP_PAIR_BONUS * (int(white_pair) - int(black_pair))
     # Modest positional bonuses complement material without overwhelming it.
     positional = 0
     nonpawn_material = sum(
@@ -77,7 +83,7 @@ def evaluate(board: chess.Board):
             table = POSITIONAL_TABLES[piece_type, color, endgame]
             positional += sign * sum(table[square] for square in
                                      chess.scan_forward(board.pieces_mask(piece_type, color)))
-    return material + positional
+    return material + positional + bishop_pair
 
 
 class SearchStopped(Exception):

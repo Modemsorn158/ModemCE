@@ -80,7 +80,11 @@ class SearchTests(unittest.TestCase):
                 else:
                     bonus = 0
                 positional += bonus if piece.color else -bonus
-            return material + positional
+            def pair_for(color):
+                return len({(chess.square_file(s) + chess.square_rank(s)) % 2
+                            for s in board.pieces(chess.BISHOP, color)}) == 2
+            pair = move.BISHOP_PAIR_BONUS * (int(pair_for(chess.WHITE)) - int(pair_for(chess.BLACK)))
+            return material + positional + pair
 
         rng = random.Random(10)
         board = chess.Board()
@@ -213,6 +217,17 @@ class SearchTests(unittest.TestCase):
         stopped.set()
         self.assertIn(move.fallback_move(board, moves, None, stopped), board.legal_moves)
         self.assertEqual(board.fen(), original)
+
+    def test_bishop_pair_bonus_applies_to_the_correct_color(self):
+        board = chess.Board("4k3/p7/8/8/8/8/8/2BBK3 w - - 0 1")
+        with patch.object(move, "BISHOP_PAIR_BONUS", 0):
+            baseline = move.evaluate(board)
+        self.assertEqual(move.evaluate(board) - baseline, move.BISHOP_PAIR_BONUS)
+        self.assertEqual(move.evaluate(board), -move.evaluate(board.mirror()))
+        same_color = chess.Board("4k3/p7/8/8/8/4B3/8/2B1K3 w - - 0 1")
+        with patch.object(move, "BISHOP_PAIR_BONUS", 0):
+            same_color_baseline = move.evaluate(same_color)
+        self.assertEqual(move.evaluate(same_color), same_color_baseline)
 
 
 if __name__ == "__main__":

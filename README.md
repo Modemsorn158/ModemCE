@@ -1,6 +1,6 @@
 # Modem Chess Engine
 
-ModemCE11 is a UCI chess engine for CuteChess. It chooses a random legal move
+ModemCE12 is a UCI chess engine for CuteChess. It chooses a random legal move
 from its opening book when the current position is present. Outside the book,
 it uses iterative deepening and alpha-beta minimax until its time budget is
 exhausted. The last fully searched depth determines the move; simpler positions
@@ -32,6 +32,7 @@ searches are capped at 10% of the remaining time for a move.
 | ModemCE9 | Carries alpha-beta bounds across root moves, rechecking potential ties. |
 | ModemCE10 | Precomputes positional scores to reduce evaluation overhead without changing the formula. |
 | ModemCE11 | Uses a quick evaluated fallback if no full search iteration finishes. |
+| ModemCE12 | Adds a modest bonus for bishops on both square colors. |
 
 ModemCE4 already introduced alpha-beta pruning. ModemCE5 improves its move
 ordering; it does not introduce pruning for the first time.
@@ -54,6 +55,7 @@ draw. Each row is a separate head-to-head match, not an overall rating.
 | CE8 vs CE7 | 15–19–6 | 45.00% | █████████░░░░░░░░░░░ |
 | CE9 vs CE8 | 37–2–1 | 93.75% | ███████████████████░ |
 | CE10 vs CE9 | 17–14–9 | 53.75% | ███████████░░░░░░░░░ |
+| CE11 vs CE10 | 12–17–11 | 43.75% | █████████░░░░░░░░░░░ |
 
 Bars round to the nearest 5%. These are only 40 games per matchup, so the
 results remain uncertain and are not proof of a general strength improvement.
@@ -65,7 +67,8 @@ choices; the two colors do not replay identical opening lines.
 
 [Game records, logs, settings and binary hashes](benchmarks/2026-11-22-extended/README.md)
 and [CE9](benchmarks/2026-11-22-ce9/README.md) and
-[CE10](benchmarks/2026-11-22-ce10/README.md) records are available for inspection,
+[CE10](benchmarks/2026-11-22-ce10/README.md) and
+[CE11](benchmarks/2026-11-22-ce11/README.md) records are available for inspection,
 as are the [earlier eight-game pilot and fixed-depth search comparison](benchmarks/2026-11-22-3s/README.md).
 The fixed-depth comparison found identical
 evaluations in three test positions; in one tactical position CE5 evaluated
@@ -106,8 +109,8 @@ regenerate the book with `python build_book.py` if the TSVs change.
 Install PyInstaller (`python -m pip install pyinstaller`), then run:
 
 ```powershell
-python -m PyInstaller --onefile --name ModemCE11 --add-data "data/opening_book.json;data" main.py
+python -m PyInstaller --onefile --name ModemCE12 --add-data "data/opening_book.json;data" main.py
 ```
 
-Select `dist/ModemCE11.exe` as a UCI engine in CuteChess. The book is embedded,
+Select `dist/ModemCE12.exe` as a UCI engine in CuteChess. The book is embedded,
 so the executable can be copied on its own. Earlier executables remain separate.
