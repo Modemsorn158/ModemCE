@@ -43,19 +43,23 @@ def analyze(folder, rng, replicates):
     if not total:
         return None
     groups = list(clusters.values())
-    estimates = []
-    for _ in range(replicates):
-        sample = [rng.choice(groups) for _ in groups]
-        estimates.append(sum(map(sum, sample)) / sum(map(len, sample)))
-    estimates.sort()
+    cluster_means = [sum(group) / len(group) for group in groups]
+    interval = None
+    # A percentile bootstrap cannot estimate uncertainty when every observed
+    # opening has the same average; reporting e.g. [100%, 100%] is misleading.
+    if len(groups) >= 5 and min(cluster_means) != max(cluster_means):
+        estimates = []
+        for _ in range(replicates):
+            sample = [rng.choice(groups) for _ in groups]
+            estimates.append(sum(map(sum, sample)) / sum(map(len, sample)))
+        estimates.sort()
+        interval = [round(100 * estimates[int(0.025 * (replicates - 1))], 2),
+                    round(100 * estimates[int(0.975 * (replicates - 1))], 2)]
     return {
         "newer": newer, "older": older, "wins": wins, "losses": losses, "draws": draws,
         "games": total, "unique_openings": len(groups),
         "score_percent": round(100 * (wins + draws / 2) / total, 2),
-        "opening_cluster_bootstrap_95_percent": [
-            round(100 * estimates[int(0.025 * (replicates - 1))], 2),
-            round(100 * estimates[int(0.975 * (replicates - 1))], 2),
-        ],
+        "opening_cluster_bootstrap_95_percent": interval,
     }
 
 
