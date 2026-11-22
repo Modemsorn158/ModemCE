@@ -45,6 +45,10 @@ up to six extra plies, to reduce premature evaluations during tactics.
 
 ## Preliminary match results
 
+An [overnight paired-opening study](benchmarks/overnight-2026-11-22/README.md)
+uses longer clocks and includes cross-generation comparisons. Its report is
+updated as batches finish; the table below is the earlier short-clock study.
+
 Score is from the newer engine's perspective: one point for a win, half for a
 draw. Each row is a separate head-to-head match, not an overall rating.
 

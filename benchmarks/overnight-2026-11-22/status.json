@@ -1,0 +1,37 @@
+{
+  "state": "running",
+  "updated_utc": "2026-11-22T14:24:02+00:00",
+  "completed_batches": [
+    {
+      "match": "ModemCE6-vs-ModemCE5",
+      "batch": 1,
+      "games": 10,
+      "opening_start": 1
+    },
+    {
+      "match": "ModemCE9-vs-ModemCE8",
+      "batch": 1,
+      "games": 10,
+      "opening_start": 1
+    },
+    {
+      "match": "ModemCE12-vs-ModemCE5",
+      "batch": 1,
+      "games": 10,
+      "opening_start": 1
+    },
+    {
+      "match": "ModemCE12-vs-ModemCE9",
+      "batch": 1,
+      "games": 10,
+      "opening_start": 1
+    },
+    {
+      "match": "ModemCE12-vs-ModemCE11",
+      "batch": 1,
+      "games": 10,
+      "opening_start": 1
+    }
+  ],
+  "error": null
+}

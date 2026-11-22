@@ -1,0 +1,47 @@
+{
+  "started_utc": "2026-11-22T13:35:25+00:00",
+  "deadline_utc": "2026-11-22T23:00:00+00:00",
+  "last_batch_start_utc": "2026-11-22T22:30:00+00:00",
+  "cutechess_cli_sha256": "8889f9582dc688c567704cf083f6025baf77f791cde903698c70b3420caf5d7e",
+  "openings_sha256": "52483c7e4aaf1603b014e0af09854840640c7e9d0d147cfc1b2043c3a654bfaf",
+  "engines_sha256": {
+    "ModemCE5": "4ada72d6b343869a730a9d09740e8cedaa05de2d0a99d0c3dcff4a4ebf450b71",
+    "ModemCE6": "201123ed35fc53be5c745963ed059f233903c5599b5af0d1ac3a625b99f13d85",
+    "ModemCE8": "4ffdfa29dbe5cd22da895fc7f29eb16fc70a1cf9c67cb4e26176e678301d252f",
+    "ModemCE9": "2950616bc0ce3ad7994d5d1f27cb91db697b72f1acedc69e10a37dfedd318610",
+    "ModemCE11": "3572d2dcf393340387b101905716343f4ba36e032552c5e0eeb97cb015b330cf",
+    "ModemCE12": "7233015a213df17e20041f82d30ce1be83f88400022935c2ede5116a9c07a317"
+  },
+  "pairs": [
+    [
+      6,
+      5
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      12,
+      9
+    ],
+    [
+      12,
+      11
+    ]
+  ],
+  "time_control": "30+0.2",
+  "time_margin_ms": 1000,
+  "max_full_moves": 200,
+  "concurrency": 1,
+  "openings": 25,
+  "games_per_batch": 10,
+  "batches_per_pair_target": 10,
+  "opening_set": "benchmarks/openings/overnight.pgn",
+  "engine_book": "enabled",
+  "engine_randomness": "unseeded"
+}

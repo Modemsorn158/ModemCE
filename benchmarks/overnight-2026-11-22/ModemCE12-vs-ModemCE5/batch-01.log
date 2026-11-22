@@ -1,0 +1,45 @@
+Command: <PROJECT>\tools\cutechess-1.5.1\cutechess-1.5.1-win64\cutechess-cli.exe -engine cmd=<PROJECT>\dist\ModemCE12.exe name=ModemCE12 -engine cmd=<PROJECT>\dist\ModemCE5.exe name=ModemCE5 -each proto=uci tc=30+0.2 timemargin=1000 -openings file=<PROJECT>\benchmarks\openings\overnight.pgn format=pgn plies=6 order=sequential start=1 -repeat -games 2 -rounds 5 -concurrency 1 -maxmoves 200 -pgnout <PROJECT>\benchmarks\overnight-2026-11-22\ModemCE12-vs-ModemCE5\batch-01.pgn fi
+
+Started game 1 of 10 (ModemCE12 vs ModemCE5)
+Finished game 1 (ModemCE12 vs ModemCE5): 1-0 {White mates}
+Score of ModemCE12 vs ModemCE5: 1 - 0 - 0  [1.000] 1
+Started game 2 of 10 (ModemCE5 vs ModemCE12)
+Finished game 2 (ModemCE5 vs ModemCE12): 0-1 {Black mates}
+Score of ModemCE12 vs ModemCE5: 2 - 0 - 0  [1.000] 2
+Started game 3 of 10 (ModemCE12 vs ModemCE5)
+Finished game 3 (ModemCE12 vs ModemCE5): 1-0 {White mates}
+Score of ModemCE12 vs ModemCE5: 3 - 0 - 0  [1.000] 3
+Started game 4 of 10 (ModemCE5 vs ModemCE12)
+Finished game 4 (ModemCE5 vs ModemCE12): 0-1 {Black mates}
+Score of ModemCE12 vs ModemCE5: 4 - 0 - 0  [1.000] 4
+Started game 5 of 10 (ModemCE12 vs ModemCE5)
+Finished game 5 (ModemCE12 vs ModemCE5): 1-0 {White mates}
+Score of ModemCE12 vs ModemCE5: 5 - 0 - 0  [1.000] 5
+Started game 6 of 10 (ModemCE5 vs ModemCE12)
+Finished game 6 (ModemCE5 vs ModemCE12): 0-1 {Black mates}
+Score of ModemCE12 vs ModemCE5: 6 - 0 - 0  [1.000] 6
+Started game 7 of 10 (ModemCE12 vs ModemCE5)
+Finished game 7 (ModemCE12 vs ModemCE5): 1-0 {White mates}
+Score of ModemCE12 vs ModemCE5: 7 - 0 - 0  [1.000] 7
+Started game 8 of 10 (ModemCE5 vs ModemCE12)
+Finished game 8 (ModemCE5 vs ModemCE12): 0-1 {Black mates}
+Score of ModemCE12 vs ModemCE5: 8 - 0 - 0  [1.000] 8
+Started game 9 of 10 (ModemCE12 vs ModemCE5)
+Finished game 9 (ModemCE12 vs ModemCE5): 1-0 {White mates}
+Score of ModemCE12 vs ModemCE5: 9 - 0 - 0  [1.000] 9
+Started game 10 of 10 (ModemCE5 vs ModemCE12)
+Finished game 10 (ModemCE5 vs ModemCE12): 0-1 {Black mates}
+Score of ModemCE12 vs ModemCE5: 10 - 0 - 0  [1.000] 10
+...      ModemCE12 playing White: 5 - 0 - 0  [1.000] 5
+...      ModemCE12 playing Black: 5 - 0 - 0  [1.000] 5
+...      White vs Black: 5 - 5 - 0  [0.500] 10
+Elo difference: inf +/- nan, LOS: 99.9 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: ModemCE12
+   "Win: Black mates": 5
+   "Win: White mates": 5
+Player: ModemCE5
+   "Loss: Black mates": 5
+   "Loss: White mates": 5
+Finished match
