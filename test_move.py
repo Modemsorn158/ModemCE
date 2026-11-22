@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
 import random
+from threading import Event
 
 import chess
 import chess.polyglot
@@ -180,6 +181,7 @@ class SearchTests(unittest.TestCase):
 
         with patch.dict(move.OPENING_BOOK, {}, clear=True), \
              patch.object(move, "choice", side_effect=lambda items: items[0]), \
+             patch.object(move, "fallback_move", return_value=candidates[0]), \
              patch.object(move, "search", side_effect=fake_search):
             chosen = move.get_move(board, {"depth": 1})
         self.assertEqual(chosen, candidates[0])
@@ -199,6 +201,18 @@ class SearchTests(unittest.TestCase):
                 chosen = move.get_move(board, {"depth": 2})
             self.assertEqual(scores[chosen], target)
             self.assertEqual(board.fen(), original)
+
+    def test_fallback_chooses_static_capture_and_respects_stop(self):
+        board = chess.Board("4k3/3q4/8/8/8/8/8/3QK3 w - - 0 1")
+        original = board.fen()
+        moves = list(board.legal_moves)
+        chosen = move.fallback_move(board, moves, None, Event())
+        self.assertEqual(chosen.uci(), "d1d7")
+        self.assertEqual(board.fen(), original)
+        stopped = Event()
+        stopped.set()
+        self.assertIn(move.fallback_move(board, moves, None, stopped), board.legal_moves)
+        self.assertEqual(board.fen(), original)
 
 
 if __name__ == "__main__":

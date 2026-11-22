@@ -197,6 +197,25 @@ def time_budget(board: chess.Board, limits: dict):
     return 0.5
 
 
+def fallback_move(board: chess.Board, moves, deadline, stop):
+    """Choose a quick static move if iterative deepening cannot finish a ply."""
+    fallback = choice(moves)
+    best_score = -float("inf") if board.turn == chess.WHITE else float("inf")
+    maximizing = board.turn == chess.WHITE
+    for candidate in moves:
+        if stop.is_set() or (deadline is not None and monotonic() >= deadline):
+            break
+        board.push(candidate)
+        try:
+            score = position_score(board, 1)
+        finally:
+            board.pop()
+        if (maximizing and score > best_score) or (not maximizing and score < best_score):
+            best_score = score
+            fallback = candidate
+    return fallback
+
+
 def get_move(board: chess.Board, limits=None, stop=None, on_depth=None):
     limits = limits or {}
     stop = stop or Event()
@@ -214,7 +233,10 @@ def get_move(board: chess.Board, limits=None, stop=None, on_depth=None):
 
     budget = time_budget(board, limits)
     deadline = None if budget is None else monotonic() + budget
-    best_move = choice(moves)  # Legal fallback if even depth one cannot finish.
+    # Reserve almost all of the budget for full search. If no time remains,
+    # fallback_move still returns a legal move immediately.
+    fallback_seconds = min(0.005, budget * 0.1) if budget is not None else 0.005
+    best_move = fallback_move(board, moves, monotonic() + fallback_seconds, stop)
     max_depth = max(1, limits.get("depth", 64))
     for depth in range(1, max_depth + 1):
         scores = []
