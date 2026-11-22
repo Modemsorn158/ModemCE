@@ -20,7 +20,7 @@ def main():
     parser.add_argument("--rounds", type=int, default=4, help="two color-swapped games per round")
     parser.add_argument("--tc", default="3+0.03", help="seconds per game + increment per move")
     parser.add_argument("--first-version", type=int, default=2, help="first newer version to test")
-    parser.add_argument("--last-version", type=int, default=8, help="last newer version to test")
+    parser.add_argument("--last-version", type=int, default=12, help="last newer version to test")
     parser.add_argument("--output", type=Path, required=True, help="new output directory")
     args = parser.parse_args()
     if args.rounds < 1:

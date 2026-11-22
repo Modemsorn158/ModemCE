@@ -19,20 +19,24 @@ searches are capped at 10% of the remaining time for a move.
 
 ## Versions
 
-| Version | Feature introduced |
-| --- | --- |
-| ModemCE1 | Random legal moves. |
-| ModemCE2 | Lichess opening book; random legal moves outside the book. |
-| ModemCE3 | Material evaluation and two-ply minimax outside the book. |
-| ModemCE4 | Time-aware iterative deepening and alpha-beta pruning. |
-| ModemCE5 | Improved capture and promotion ordering for the existing alpha-beta search. |
-| ModemCE6 | Positional evaluation rewards pawn advancement and piece centralization. |
-| ModemCE7 | Quiescence search extends forcing moves at the search horizon. |
-| ModemCE8 | King evaluation encourages safety early and activity in the endgame. |
-| ModemCE9 | Carries alpha-beta bounds across root moves, rechecking potential ties. |
-| ModemCE10 | Precomputes positional scores to reduce evaluation overhead without changing the formula. |
-| ModemCE11 | Uses a quick evaluated fallback if no full search iteration finishes. |
-| ModemCE12 | Adds a modest bonus for bishops on both square colors. |
+| Version | Feature introduced | Source commit |
+| --- | --- | --- |
+| ModemCE1 | Random legal moves. | `e023ab6` |
+| ModemCE2 | Lichess opening book; random legal moves outside the book. | `31c6fd8` |
+| ModemCE3 | Material evaluation and two-ply minimax outside the book. | `8c24c89` |
+| ModemCE4 | Time-aware iterative deepening and alpha-beta pruning. | `14f08fb` |
+| ModemCE5 | Improved capture and promotion ordering for the existing alpha-beta search. | `07bb2e1` |
+| ModemCE6 | Positional evaluation rewards pawn advancement and piece centralization. | `acaf856` |
+| ModemCE7 | Quiescence search extends forcing moves at the search horizon. | `9040527` |
+| ModemCE8 | King evaluation encourages safety early and activity in the endgame. | `fad91fa` |
+| ModemCE9 | Carries alpha-beta bounds across root moves, rechecking potential ties. | `0bf5fd3` |
+| ModemCE10 | Precomputes positional scores to reduce evaluation overhead without changing the formula. | `1ad05d5` |
+| ModemCE11 | Uses a quick evaluated fallback if no full search iteration finishes. | `b69a8f8` |
+| ModemCE12 | Adds a modest bonus for bishops on both square colors. | `fc5fd62` |
+
+The source commits allow earlier versions to be rebuilt from a separate Git
+checkout. The Windows executables in `dist/` are local build outputs and are
+not included in the repository.
 
 ModemCE4 already introduced alpha-beta pruning. ModemCE5 improves its move
 ordering; it does not introduce pruning for the first time.
@@ -56,6 +60,7 @@ draw. Each row is a separate head-to-head match, not an overall rating.
 | CE9 vs CE8 | 37–2–1 | 93.75% | ███████████████████░ |
 | CE10 vs CE9 | 17–14–9 | 53.75% | ███████████░░░░░░░░░ |
 | CE11 vs CE10 | 12–17–11 | 43.75% | █████████░░░░░░░░░░░ |
+| CE12 vs CE11 | 13–15–12 | 47.50% | ██████████░░░░░░░░░░ |
 
 Bars round to the nearest 5%. These are only 40 games per matchup, so the
 results remain uncertain and are not proof of a general strength improvement.
@@ -68,7 +73,8 @@ choices; the two colors do not replay identical opening lines.
 [Game records, logs, settings and binary hashes](benchmarks/2026-11-22-extended/README.md)
 and [CE9](benchmarks/2026-11-22-ce9/README.md) and
 [CE10](benchmarks/2026-11-22-ce10/README.md) and
-[CE11](benchmarks/2026-11-22-ce11/README.md) records are available for inspection,
+[CE11](benchmarks/2026-11-22-ce11/README.md) and
+[CE12](benchmarks/2026-11-22-ce12/README.md) records are available for inspection,
 as are the [earlier eight-game pilot and fixed-depth search comparison](benchmarks/2026-11-22-3s/README.md).
 The fixed-depth comparison found identical
 evaluations in three test positions; in one tactical position CE5 evaluated

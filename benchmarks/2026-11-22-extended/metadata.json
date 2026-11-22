@@ -1,0 +1,21 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "cutechess_cli_sha256": "8889f9582dc688c567704cf083f6025baf77f791cde903698c70b3420caf5d7e",
+  "engine_sha256": {
+    "ModemCE1": "c9e609bea51750bcca2304808b56e7f996c15872625d6d36604648470fbcb4c5",
+    "ModemCE2": "b32011149af229e840634058ad737a3bb63d2dc3273697d07d14d2ee83b9abab",
+    "ModemCE3": "803505f0b91ddd2c783e79905e130c594ad580313fde9c8a8121b0c2fa7c05ba",
+    "ModemCE4": "6c488407747b606e46d542ebefc33ce35a7c70368e7a4a05e70d9d13e1ed91ec",
+    "ModemCE5": "4ada72d6b343869a730a9d09740e8cedaa05de2d0a99d0c3dcff4a4ebf450b71",
+    "ModemCE6": "201123ed35fc53be5c745963ed059f233903c5599b5af0d1ac3a625b99f13d85",
+    "ModemCE7": "20431caa075e8c126b60ea9a3d6b104d1ff36a2e48aed6a9939f665061842411",
+    "ModemCE8": "4ffdfa29dbe5cd22da895fc7f29eb16fc70a1cf9c67cb4e26176e678301d252f"
+  },
+  "rounds_per_match": 20,
+  "games_per_round": 2,
+  "time_control": "3+0.03",
+  "time_margin_ms": 1000,
+  "concurrency": 1,
+  "max_full_moves": 200
+}

@@ -1,0 +1,143 @@
+Command: <PROJECT>\tools\cutechess-1.5.1\cutechess-1.5.1-win64\cutechess-cli.exe -engine cmd=<PROJECT>\dist\ModemCE10.exe name=ModemCE10 -engine cmd=<PROJECT>\dist\ModemCE9.exe name=ModemCE9 -each proto=uci tc=3+0.03 timemargin=1000 -games 2 -rounds 20 -concurrency 1 -maxmoves 200 -pgnout <PROJECT>\benchmarks\2026-11-22-ce10\ModemCE10-vs-ModemCE9.pgn
+
+Started game 1 of 40 (ModemCE10 vs ModemCE9)
+Finished game 1 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 0 - 0 - 1  [0.500] 1
+Started game 2 of 40 (ModemCE9 vs ModemCE10)
+Finished game 2 (ModemCE9 vs ModemCE10): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 0 - 0 - 2  [0.500] 2
+Started game 3 of 40 (ModemCE10 vs ModemCE9)
+Finished game 3 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 0 - 1 - 2  [0.333] 3
+Started game 4 of 40 (ModemCE9 vs ModemCE10)
+Finished game 4 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 1 - 1 - 2  [0.500] 4
+Started game 5 of 40 (ModemCE10 vs ModemCE9)
+Finished game 5 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 2 - 1 - 2  [0.600] 5
+Started game 6 of 40 (ModemCE9 vs ModemCE10)
+Finished game 6 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 2 - 2 - 2  [0.500] 6
+Started game 7 of 40 (ModemCE10 vs ModemCE9)
+Finished game 7 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 2 - 2 - 3  [0.500] 7
+Started game 8 of 40 (ModemCE9 vs ModemCE10)
+Finished game 8 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 3 - 2 - 3  [0.563] 8
+Started game 9 of 40 (ModemCE10 vs ModemCE9)
+Finished game 9 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 3 - 2 - 4  [0.556] 9
+Started game 10 of 40 (ModemCE9 vs ModemCE10)
+Finished game 10 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 4 - 2 - 4  [0.600] 10
+Started game 11 of 40 (ModemCE10 vs ModemCE9)
+Finished game 11 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 4 - 3 - 4  [0.545] 11
+Started game 12 of 40 (ModemCE9 vs ModemCE10)
+Finished game 12 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 4 - 4 - 4  [0.500] 12
+Started game 13 of 40 (ModemCE10 vs ModemCE9)
+Finished game 13 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 4 - 5 - 4  [0.462] 13
+Started game 14 of 40 (ModemCE9 vs ModemCE10)
+Finished game 14 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 5 - 5 - 4  [0.500] 14
+Started game 15 of 40 (ModemCE10 vs ModemCE9)
+Finished game 15 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 6 - 5 - 4  [0.533] 15
+Started game 16 of 40 (ModemCE9 vs ModemCE10)
+Finished game 16 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 7 - 5 - 4  [0.563] 16
+Started game 17 of 40 (ModemCE10 vs ModemCE9)
+Finished game 17 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by stalemate}
+Score of ModemCE10 vs ModemCE9: 7 - 5 - 5  [0.559] 17
+Started game 18 of 40 (ModemCE9 vs ModemCE10)
+Finished game 18 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 8 - 5 - 5  [0.583] 18
+Started game 19 of 40 (ModemCE10 vs ModemCE9)
+Finished game 19 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 9 - 5 - 5  [0.605] 19
+Started game 20 of 40 (ModemCE9 vs ModemCE10)
+Finished game 20 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 9 - 6 - 5  [0.575] 20
+Started game 21 of 40 (ModemCE10 vs ModemCE9)
+Finished game 21 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 9 - 7 - 5  [0.548] 21
+Started game 22 of 40 (ModemCE9 vs ModemCE10)
+Finished game 22 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 9 - 8 - 5  [0.523] 22
+Started game 23 of 40 (ModemCE10 vs ModemCE9)
+Finished game 23 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 10 - 8 - 5  [0.543] 23
+Started game 24 of 40 (ModemCE9 vs ModemCE10)
+Finished game 24 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 11 - 8 - 5  [0.563] 24
+Started game 25 of 40 (ModemCE10 vs ModemCE9)
+Finished game 25 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 11 - 8 - 6  [0.560] 25
+Started game 26 of 40 (ModemCE9 vs ModemCE10)
+Finished game 26 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 12 - 8 - 6  [0.577] 26
+Started game 27 of 40 (ModemCE10 vs ModemCE9)
+Finished game 27 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 12 - 9 - 6  [0.556] 27
+Started game 28 of 40 (ModemCE9 vs ModemCE10)
+Finished game 28 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 12 - 10 - 6  [0.536] 28
+Started game 29 of 40 (ModemCE10 vs ModemCE9)
+Finished game 29 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 13 - 10 - 6  [0.552] 29
+Started game 30 of 40 (ModemCE9 vs ModemCE10)
+Finished game 30 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 14 - 10 - 6  [0.567] 30
+Started game 31 of 40 (ModemCE10 vs ModemCE9)
+Finished game 31 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 14 - 10 - 7  [0.565] 31
+Started game 32 of 40 (ModemCE9 vs ModemCE10)
+Finished game 32 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 14 - 11 - 7  [0.547] 32
+Started game 33 of 40 (ModemCE10 vs ModemCE9)
+Finished game 33 (ModemCE10 vs ModemCE9): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 14 - 12 - 7  [0.530] 33
+Started game 34 of 40 (ModemCE9 vs ModemCE10)
+Finished game 34 (ModemCE9 vs ModemCE10): 0-1 {Black mates}
+Score of ModemCE10 vs ModemCE9: 15 - 12 - 7  [0.544] 34
+Started game 35 of 40 (ModemCE10 vs ModemCE9)
+Finished game 35 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 16 - 12 - 7  [0.557] 35
+Started game 36 of 40 (ModemCE9 vs ModemCE10)
+Finished game 36 (ModemCE9 vs ModemCE10): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 16 - 12 - 8  [0.556] 36
+Started game 37 of 40 (ModemCE10 vs ModemCE9)
+Finished game 37 (ModemCE10 vs ModemCE9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of ModemCE10 vs ModemCE9: 16 - 12 - 9  [0.554] 37
+Started game 38 of 40 (ModemCE9 vs ModemCE10)
+Finished game 38 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 16 - 13 - 9  [0.539] 38
+Started game 39 of 40 (ModemCE10 vs ModemCE9)
+Finished game 39 (ModemCE10 vs ModemCE9): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 17 - 13 - 9  [0.551] 39
+Started game 40 of 40 (ModemCE9 vs ModemCE10)
+Finished game 40 (ModemCE9 vs ModemCE10): 1-0 {White mates}
+Score of ModemCE10 vs ModemCE9: 17 - 14 - 9  [0.537] 40
+...      ModemCE10 playing White: 7 - 6 - 7  [0.525] 20
+...      ModemCE10 playing Black: 10 - 8 - 2  [0.550] 20
+...      White vs Black: 15 - 16 - 9  [0.487] 40
+Elo difference: 26.1 +/- 97.4, LOS: 70.5 %, DrawRatio: 22.5 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: ModemCE10
+   "Draw by 3-fold repetition": 8
+   "Draw by stalemate": 1
+   "Loss: Black mates": 6
+   "Loss: White mates": 8
+   "Win: Black mates": 10
+   "Win: White mates": 7
+Player: ModemCE9
+   "Draw by 3-fold repetition": 8
+   "Draw by stalemate": 1
+   "Loss: Black mates": 10
+   "Loss: White mates": 7
+   "Win: Black mates": 6
+   "Win: White mates": 8
+Finished match
