@@ -12,7 +12,7 @@ while True:
     if not arguments == []:
         match arguments[0]:
             case "uci":
-                print("id name ModemCE2", flush = True)
+                print("id name ModemCE3", flush = True)
                 print("id author modem158", flush = True)
                 print("uciok", flush = True)
             case "isready":

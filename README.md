@@ -1,9 +1,11 @@
 # Modem Chess Engine
 
-ModemCE2 is a UCI chess engine for CuteChess. It chooses a random legal move
-from its opening book when the current position is present, and otherwise
-chooses a random legal move. Book choices are uniform among distinct moves;
-they are not weighted by popularity or evaluated for strength.
+ModemCE3 is a UCI chess engine for CuteChess. It chooses a random legal move
+from its opening book when the current position is present. Outside the book,
+it searches two plies (its move and the opponent's best reply) using minimax.
+The evaluation counts material and recognizes checkmate and automatic draws;
+it chooses randomly between equally scored moves. Book choices are uniform
+among distinct moves and are not evaluated for strength.
 
 ## Opening book
 
@@ -22,8 +24,8 @@ regenerate the book with `python build_book.py` if the TSVs change.
 Install PyInstaller (`python -m pip install pyinstaller`), then run:
 
 ```powershell
-python -m PyInstaller --onefile --name ModemCE2 --add-data "data/opening_book.json;data" main.py
+python -m PyInstaller --onefile --name ModemCE3 --add-data "data/opening_book.json;data" main.py
 ```
 
-Select `dist/ModemCE2.exe` as a UCI engine in CuteChess. The book is embedded,
-so the executable can be copied on its own. `ModemCE1.exe` remains separate.
+Select `dist/ModemCE3.exe` as a UCI engine in CuteChess. The book is embedded,
+so the executable can be copied on its own. Earlier executables remain separate.
