@@ -37,6 +37,11 @@ def evaluate(board: chess.Board):
     )
     # Modest positional bonuses complement material without overwhelming it.
     positional = 0
+    nonpawn_material = sum(
+        PIECE_VALUES[piece] * (len(board.pieces(piece, chess.WHITE)) +
+                               len(board.pieces(piece, chess.BLACK)))
+        for piece in (chess.KNIGHT, chess.BISHOP, chess.ROOK, chess.QUEEN)
+    )
     for square, piece in board.piece_map().items():
         file = chess.square_file(square)
         rank = chess.square_rank(square)
@@ -50,6 +55,9 @@ def evaluate(board: chess.Board):
             bonus = 3 * centrality
         elif piece.piece_type == chess.QUEEN:
             bonus = centrality
+        elif piece.piece_type == chess.KING:
+            # Centralized kings are useful in the endgame, but exposed earlier.
+            bonus = 5 * centrality if nonpawn_material <= 2600 else -8 * advance
         else:
             bonus = 0
         positional += bonus if piece.color == chess.WHITE else -bonus

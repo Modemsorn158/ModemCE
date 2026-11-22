@@ -44,6 +44,12 @@ class SearchTests(unittest.TestCase):
         self.assertGreater(move.evaluate(center), move.evaluate(edge))
         self.assertEqual(move.evaluate(center), -move.evaluate(center.mirror()))
 
+    def test_king_centralization_is_rewarded_in_the_endgame(self):
+        edge = chess.Board("4k3/p7/8/8/8/8/8/K7 w - - 0 1")
+        center = chess.Board("4k3/p7/8/8/3K4/8/8/8 w - - 0 1")
+        self.assertGreater(move.evaluate(center), move.evaluate(edge))
+        self.assertEqual(move.evaluate(center), -move.evaluate(center.mirror()))
+
     def test_book_takes_precedence(self):
         board = chess.Board()
         key = f"{chess.polyglot.zobrist_hash(board):016x}"
